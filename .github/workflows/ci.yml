@@ -34,3 +34,4 @@ jobs:
           branch: master # 部署分支，通常是main或master  
           folder: public # Hexo生成的静态文件所在的文件夹  
           access_token: ${{ secrets.ACCESS_TOKEN }} # 你的GitHub个人访问令牌
+          
