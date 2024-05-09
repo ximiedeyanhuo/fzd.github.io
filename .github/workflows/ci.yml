@@ -35,14 +35,9 @@ jobs:
 
       - name: 5. 安装主题 # Install Theme
         run: |
-#          git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
-#          npm install hexo-renderer-pug hexo-renderer-stylus --save
-          git clone -b master https://github.com/cofess/hexo-theme-pure.git themes/pure
-          npm install hexo-wordcount --save
-          npm install hexo-generator-json-content --save
-          npm install hexo-generator-feed --save
-          npm install hexo-generator-sitemap --save
-          npm install hexo-generator-baidu-sitemap --save
+          git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
+          npm install hexo-renderer-pug hexo-renderer-stylus --save
+          
 
       - name: Install Dependencies # 5. 安装依赖  如果没有缓存或 插件有更新，则安装插件
         if: steps.cache-modules.outputs.cache-hit != 'true'
