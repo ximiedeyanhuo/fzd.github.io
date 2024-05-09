@@ -37,7 +37,7 @@ jobs:
         run: |
 #          git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
 #          npm install hexo-renderer-pug hexo-renderer-stylus --save
-          git clone https://github.com/cofess/hexo-theme-pure.git themes/pure
+          git clone -b master https://github.com/cofess/hexo-theme-pure.git themes/pure
           npm install hexo-wordcount --save
           npm install hexo-generator-json-content --save
           npm install hexo-generator-feed --save
