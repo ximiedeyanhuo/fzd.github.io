@@ -53,6 +53,6 @@ jobs:
       - name: 7. 部署到 github page # Deploy GitHub Pages：github.io仓库中保存每次提交日志 其中clean-exclude为hexo-seo-autopush插件配置，如果没安装则按需删除
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          token: ${{ secrets.ACCESS_TOKEN }}  # 你的GitHub个人访问令牌
-          branch: master
-          folder: public
+          branch: master # 部署分支，通常是main或master
+          folder: public # Hexo生成的静态文件所在的文件夹
+          access_token: ${{ secrets.ACCESS_TOKEN }} # 你的GitHub个人访问令牌
