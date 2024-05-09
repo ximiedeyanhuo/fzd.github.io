@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - main # 确保与你的默认分支名称匹配
+      - master # 确保与你的默认分支名称匹配
 
 jobs:
   build:
@@ -31,6 +31,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
-          branch: main # 部署分支，通常是main或master
+          branch: master # 部署分支，通常是main或master
           folder: public # Hexo生成的静态文件所在的文件夹
           access_token: ${{ secrets.ACCESS_TOKEN }} # 你的GitHub个人访问令牌
