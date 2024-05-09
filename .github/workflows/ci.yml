@@ -54,7 +54,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
-          repository-name: ${{ secrets.GITHUBUSERNAME }}/${{ secrets.GITHUBUSERNAME }}.github.io
+          # repository-name: ${{ secrets.GITHUBUSERNAME }}/${{ secrets.GITHUBUSERNAME }}.github.io
           branch: master
           folder: public
           access_token: ${{ secrets.ACCESS_TOKEN }} # 你的GitHub个人访问令牌
