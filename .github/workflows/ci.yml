@@ -54,3 +54,45 @@ jobs:
           branch: main # 部署分支，通常是main或master
           folder: public # Hexo生成的静态文件所在的文件夹
           access_token: ${{ secrets.ACCESS_TOKEN }} # 你的GitHub个人访问令牌
+
+
+
+
+#      - name: 7. 部署到 其他的仓库 github page # Deploy：github.io仓库中日志只保留最新
+#        run: |
+#          cd ./public
+#          git init
+#          git config --global user.name '${{ secrets.GITHUBUSERNAME }}'
+#          git config --global user.email '${{ secrets.GITHUBEMAIL }}'
+#          git add .
+#          git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
+#          git push --force --quiet "https://${{ secrets.GITHUBUSERNAME }}:${{ secrets.GITHUBTOKEN }}@github.com/${{ secrets.GITHUBUSERNAME }}/${{ secrets.GITHUBUSERNAME }}.github.io.git" master:main
+
+#      - name: Push Server  #8. 推送到服务器私有仓库
+#        uses: easingthemes/ssh-deploy@main
+#        env:
+#          SSH_PRIVATE_KEY: ${{ secrets.SERVER_PRIVATE_KEY }} # 服务器生成的私钥，例如 -----BEGIN RSA PRIVATE KEY-----xxxx-----END RSA PRIVATE KEY-----
+#          ARGS: "-avz --delete" # rsync参数
+#          SOURCE: "public/"
+#          REMOTE_HOST: ${{ secrets.SERVER_HOST }} # 服务器ip地址，例如 1.2.3.4
+#          REMOTE_USER: ${{ secrets.SERVER_USER }} # 登录用户，例如 ubuntu 注意应拥有该文件夹的权限，可以在root下为用户赋权 chown -R ubuntu:755 /www/wwwroot/hexo
+#          TARGET: ${{ secrets.SERVER_PATH }}    # 服务器目录，例如 /www/wwwroot/hexo
+#          EXCLUDE: ".git/,.user.ini"            # 排除源路径中.git/ 目标路径中.user.ini 这俩不做同步操作
+#
+#      - name: Refresh CDN # 9. 刷新CDN
+#        run: |
+#          pip install --upgrade pip
+#          pip install tencentcloud-sdk-python
+#          pip install tencentcloud-sdk-python-cdn
+#          python3 cdn.py
+
+#      - name: Sync to Gitee  # 10. 备份Gitee
+#        uses: wearerequired/git-mirror-action@master
+#        env:
+#          # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
+#          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
+#        with:
+#          # 注意替换为你的 GitHub 源仓库地址
+#          source-repo: git@github.com:GC-ZF/Blog-Backups.git
+#          # 注意替换为你的 Gitee 目标仓库地址
+#          destination-repo: git@gitee.com:gc-zhang/blog-backups.git
