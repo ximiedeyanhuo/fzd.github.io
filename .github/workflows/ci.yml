@@ -47,8 +47,8 @@ jobs:
           hexo clean
           hexo generate
           hexo algolia
-          gulp
-          export TZ='Asia/Shanghai'
+          # gulp
+          # export TZ='Asia/Shanghai'
 
       - name: 7. 部署到 github page # Deploy GitHub Pages：github.io仓库中保存每次提交日志 其中clean-exclude为hexo-seo-autopush插件配置，如果没安装则按需删除
         uses: JamesIves/github-pages-deploy-action@v4
