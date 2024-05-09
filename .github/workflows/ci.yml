@@ -56,6 +56,3 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}  # 你的GitHub个人访问令牌
           branch: master
           folder: public
-          clean-exclude: |
-            public/.github/
-          commit-message: "${{ github.event.head_commit.message }} Updated By Github Actions"
