@@ -35,9 +35,9 @@ jobs:
 
       - name: 5. 安装主题 # Install Theme
         run: |
-          git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
+#          git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
           npm install hexo-renderer-pug hexo-renderer-stylus --save
-          
+
 
       - name: Install Dependencies # 5. 安装依赖  如果没有缓存或 插件有更新，则安装插件
         if: steps.cache-modules.outputs.cache-hit != 'true'
