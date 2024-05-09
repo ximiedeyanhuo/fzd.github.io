@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - main # 确保与你的默认分支名称匹配
+      - master # 确保与你的默认分支名称匹配
 
 jobs:
   build:
