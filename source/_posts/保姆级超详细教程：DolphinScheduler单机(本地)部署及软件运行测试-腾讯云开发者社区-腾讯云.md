@@ -3,7 +3,7 @@ title: DolphinScheduler单机(本地)部署
 ---
 
 # 保姆级超详细教程：DolphinScheduler单机(本地)部署及软件运行测试
-![image.jpg](https://cdn.nlark.com/yuque/0/2024/jpeg/29792214/1715239258850-615f3af1-7103-47dd-92c6-74067e8dca43.jpeg#clientId=u846a0b5a-ddc0-4&from=paste&id=u57393bdb&originHeight=200&originWidth=200&originalType=url&ratio=1&rotation=0&showTitle=false&size=5287&status=done&style=none&taskId=u6c0dc3ae-8c6f-4503-831f-1621e9b1084&title=)
+![image.jpg](https://cdn.nlark.com/yuque/0/2024/jpeg/29792214/1715239258850-615f3af1-7103-47dd-92c6-74067e8dca43.jpeg#averageHue=[a-z0-9\-&=%\.].*(?=\)))
 大数据真好玩
 关注
 发布于 2021-12-02 10:11:44
