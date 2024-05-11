@@ -16,29 +16,29 @@
   <meta name="author" content="拾光">
   <meta name="keywords" content="">
   
-    <meta name="description" content="保姆级超详细教程：DolphinScheduler单机(本地)部署及软件运行测试大数据真好玩关注发布于 2021-12-02 10:11:444.2K0发布于 2021-12-02 10:11:44举报文章被收录于专栏：暴走大数据暴走大数据 DolphinScheduler架构图 目录一、补充二、部署流程1.下载二进制tar.gz包2.创建部署用户并赋予目录操作权限3.ssh免密配置4.数据库初始">
+    <meta name="description" content="保姆级超详细教程：DolphinScheduler单机(本地)部署及软件运行测试 大数据真好玩 关注 发布于 2021-12-02 10:11:44 4.2K0 发布于 2021-12-02 10:11:44 举报 文章被收录于专栏：暴走大数据暴走大数据 DolphinScheduler架构图 目录一、补充 二、部署流程 1.下载二进制tar.gz包 2.创建部署用户并赋予目录操作权限 3.ss">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DolphinScheduler单机(本地)部署">
+<meta property="og:title" content="荒岛">
 <meta property="og:url" content="https://ximiedeyanhuo.github.io/fzd.github.io/2024/05/11/%E4%BF%9D%E5%A7%86%E7%BA%A7%E8%B6%85%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B%EF%BC%9ADolphinScheduler%E5%8D%95%E6%9C%BA(%E6%9C%AC%E5%9C%B0)%E9%83%A8%E7%BD%B2%E5%8F%8A%E8%BD%AF%E4%BB%B6%E8%BF%90%E8%A1%8C%E6%B5%8B%E8%AF%95-%E8%85%BE%E8%AE%AF%E4%BA%91%E5%BC%80%E5%8F%91%E8%80%85%E7%A4%BE%E5%8C%BA-%E8%85%BE%E8%AE%AF%E4%BA%91/index.html">
 <meta property="og:site_name" content="荒岛">
-<meta property="og:description" content="保姆级超详细教程：DolphinScheduler单机(本地)部署及软件运行测试大数据真好玩关注发布于 2021-12-02 10:11:444.2K0发布于 2021-12-02 10:11:44举报文章被收录于专栏：暴走大数据暴走大数据 DolphinScheduler架构图 目录一、补充二、部署流程1.下载二进制tar.gz包2.创建部署用户并赋予目录操作权限3.ssh免密配置4.数据库初始">
+<meta property="og:description" content="保姆级超详细教程：DolphinScheduler单机(本地)部署及软件运行测试 大数据真好玩 关注 发布于 2021-12-02 10:11:44 4.2K0 发布于 2021-12-02 10:11:44 举报 文章被收录于专栏：暴走大数据暴走大数据 DolphinScheduler架构图 目录一、补充 二、部署流程 1.下载二进制tar.gz包 2.创建部署用户并赋予目录操作权限 3.ss">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/jpeg/29792214/1715239258850-615f3af1-7103-47dd-92c6-74067e8dca43.jpeg#averageHue=[a-z0-9-&=%.].*(?=))">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/jpeg/29792214/1715239258918-b1f2635e-81a4-4da8-ab9e-9f84b31f630c.jpeg#clientId=u846a0b5a-ddc0-4&from=paste&id=u1ab9d106&originalType=url&ratio=1&rotation=0&showTitle=false&size=51276&status=done&style=none&taskId=u56d5d3b1-315b-4fd3-bda8-da8cc77a63d&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/jpeg/29792214/1715239258789-462e2eed-b51e-4aa2-9950-61c991e8ac2c.jpeg#clientId=u846a0b5a-ddc0-4&from=paste&id=u472233b5&originalType=url&ratio=1&rotation=0&showTitle=false&size=55934&status=done&style=none&taskId=u0c85523b-36e4-478a-9fa6-41fad3e77aa&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/jpeg/29792214/1715239258936-e4b93fc3-1050-43aa-8532-fdac87e87caf.jpeg#clientId=u846a0b5a-ddc0-4&from=paste&id=u0d9b9890&originHeight=610&originWidth=874&originalType=url&ratio=1&rotation=0&showTitle=false&size=51947&status=done&style=none&taskId=u246d7497-1c8e-4967-9988-0e163931f58&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/jpeg/29792214/1715239258889-cfd98bfb-3ebf-4196-b269-a46682624e62.jpeg#clientId=u846a0b5a-ddc0-4&from=paste&id=u9c242e8a&originHeight=422&originWidth=953&originalType=url&ratio=1&rotation=0&showTitle=false&size=41683&status=done&style=none&taskId=u49421081-b40b-41c4-a6dd-d8fc2061863&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/jpeg/29792214/1715239282851-e63ac640-8f95-45f7-ae7c-9e32e5218c39.jpeg#clientId=u846a0b5a-ddc0-4&from=paste&id=u56bd7de0&originHeight=34&originWidth=735&originalType=url&ratio=1&rotation=0&showTitle=false&size=10423&status=done&style=none&taskId=udbacdb88-6409-430d-a919-f015ccbf10f&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/29792214/1715239284972-fdf83fd6-3f72-426e-8fa9-69f6ec2adc72.png#clientId=u846a0b5a-ddc0-4&from=paste&id=u501cbb43&originalType=url&ratio=1&rotation=0&showTitle=false&size=44901&status=done&style=none&taskId=ua90efdeb-d37b-4499-8f86-2cb7ab29749&title=">
-<meta property="article:published_time" content="2024-05-11T02:16:00.107Z">
-<meta property="article:modified_time" content="2024-05-11T02:16:00.107Z">
+<meta property="og:image" content="https://ximiedeyanhuo.github.io/fzd.github.io/images/1.jpeg">
+<meta property="og:image" content="https://ximiedeyanhuo.github.io/fzd.github.io/images/2.jpeg">
+<meta property="og:image" content="https://ximiedeyanhuo.github.io/fzd.github.io/images/3.jpeg">
+<meta property="og:image" content="https://ximiedeyanhuo.github.io/fzd.github.io/images/4.jpeg">
+<meta property="og:image" content="https://ximiedeyanhuo.github.io/fzd.github.io/images/5.jpeg">
+<meta property="og:image" content="https://ximiedeyanhuo.github.io/fzd.github.io/images/6.jpeg">
+<meta property="og:image" content="https://ximiedeyanhuo.github.io/fzd.github.io/images/7.png">
+<meta property="article:published_time" content="2024-05-11T02:55:32.900Z">
+<meta property="article:modified_time" content="2024-05-11T02:55:32.900Z">
 <meta property="article:author" content="拾光">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2024/jpeg/29792214/1715239258850-615f3af1-7103-47dd-92c6-74067e8dca43.jpeg#averageHue=[a-z0-9-&=%.].*(?=))">
+<meta name="twitter:image" content="https://ximiedeyanhuo.github.io/fzd.github.io/images/1.jpeg">
   
   
   
-  <title>DolphinScheduler单机(本地)部署 - 荒岛</title>
+  <title>荒岛</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,7 +204,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="DolphinScheduler单机(本地)部署"></span>
+            <span id="subtitle" data-typed-text=""></span>
           
         </div>
 
@@ -215,7 +215,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-05-11 10:16" pubdate>
+        <time datetime="2024-05-11 10:55" pubdate>
           2024年5月11日 上午
         </time>
       </span>
@@ -275,35 +275,78 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">DolphinScheduler单机(本地)部署</h1>
+            <h1 id="seo-header"></h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="保姆级超详细教程：DolphinScheduler单机-本地-部署及软件运行测试"><a href="#保姆级超详细教程：DolphinScheduler单机-本地-部署及软件运行测试" class="headerlink" title="保姆级超详细教程：DolphinScheduler单机(本地)部署及软件运行测试"></a>保姆级超详细教程：DolphinScheduler单机(本地)部署及软件运行测试</h1><p><img src="https://cdn.nlark.com/yuque/0/2024/jpeg/29792214/1715239258850-615f3af1-7103-47dd-92c6-74067e8dca43.jpeg#averageHue=[a-z0-9-&=%.].*(?=))" srcset="/fzd.github.io/img/loading.gif" lazyload alt="image.jpg"><br>大数据真好玩<br>关注<br>发布于 2021-12-02 10:11:44<br>4.2K0<br>发布于 2021-12-02 10:11:44<br>举报<br>文章被收录于专栏：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/column/79529">暴走大数据</a><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/column/79529">暴走大数据</a></p>
-<h3 id="DolphinScheduler架构图"><a href="#DolphinScheduler架构图" class="headerlink" title="DolphinScheduler架构图"></a><strong>DolphinScheduler架构图</strong></h3><p><img src="https://cdn.nlark.com/yuque/0/2024/jpeg/29792214/1715239258918-b1f2635e-81a4-4da8-ab9e-9f84b31f630c.jpeg#clientId=u846a0b5a-ddc0-4&from=paste&id=u1ab9d106&originalType=url&ratio=1&rotation=0&showTitle=false&size=51276&status=done&style=none&taskId=u56d5d3b1-315b-4fd3-bda8-da8cc77a63d&title=" srcset="/fzd.github.io/img/loading.gif" lazyload alt="image.jpg"></p>
-<h5 id="目录"><a href="#目录" class="headerlink" title="目录"></a><strong>目录</strong></h5><p>一、补充<br>二、部署流程<br>1.下载二进制tar.gz包<br>2.创建部署用户并赋予目录操作权限<br>3.ssh免密配置<br>4.<a target="_blank" rel="noopener" href="https://cloud.tencent.com/solution/database?from_column=20065&from=20065">数据库</a>初始化<br>5.修改运行参数<br>6.一键部署<br>7.登录系统<br>如果你还不够熟悉DolphinScheduler，可以参考：</p>
+                <p><a name="tjCC0"></a></p>
+<h1 id="保姆级超详细教程：DolphinScheduler单机-本地-部署及软件运行测试"><a href="#保姆级超详细教程：DolphinScheduler单机-本地-部署及软件运行测试" class="headerlink" title="保姆级超详细教程：DolphinScheduler单机(本地)部署及软件运行测试"></a>保姆级超详细教程：DolphinScheduler单机(本地)部署及软件运行测试</h1><p><img src="/fzd.github.io/images/1.jpeg" srcset="/fzd.github.io/img/loading.gif" lazyload alt="image.jpg"></p>
+<p>大数据真好玩</p>
+<p>关注</p>
+<p>发布于 2021-12-02 10:11:44</p>
+<p>4.2K0</p>
+<p>发布于 2021-12-02 10:11:44</p>
+<p>举报</p>
+<p>文章被收录于专栏：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/column/79529">暴走大数据</a><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/column/79529">暴走大数据</a><br><a name="a1XKD"></a></p>
+<h3 id="DolphinScheduler架构图"><a href="#DolphinScheduler架构图" class="headerlink" title="DolphinScheduler架构图"></a><strong>DolphinScheduler架构图</strong></h3><p><img src="/fzd.github.io/images/2.jpeg" srcset="/fzd.github.io/img/loading.gif" lazyload alt="image.jpg"><br><a name="mhNdZ"></a></p>
+<h5 id="目录"><a href="#目录" class="headerlink" title="目录"></a><strong>目录</strong></h5><p>一、补充</p>
+<p>二、部署流程</p>
+<p>1.下载二进制tar.gz包</p>
+<p>2.创建部署用户并赋予目录操作权限</p>
+<p>3.ssh免密配置</p>
+<p>4.<a target="_blank" rel="noopener" href="https://cloud.tencent.com/solution/database?from_column=20065&from=20065">数据库</a>初始化</p>
+<p>5.修改运行参数</p>
+<p>6.一键部署</p>
+<p>7.登录系统</p>
+<p>如果你还不够熟悉DolphinScheduler，可以参考：</p>
 <ul>
 <li><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://mp.weixin.qq.com/s?__biz=MzI0NjU2NDkzMQ==&mid=2247494139&idx=2&sn=1af1d42dce6fdcd3bbe3382fca653b23&chksm=e9bff8d7dec871c1ddebcc37a72bd6ca41ea908332fae08bc8f57437894d31dc77e9358de532&token=422302214&lang=zh_CN&scene=21%23wechat_redirect&source=article&objectId=1909521">《调度系统Apache DolphinScheduler介绍和设计原理》</a></li>
-<li><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://mp.weixin.qq.com/s?__biz=MzI0NjU2NDkzMQ==&mid=2247486115&idx=2&sn=0823d445c5f2e6079de68277a3f6d60a&chksm=e9bc1b8fdecb929933ac403f92414ad1bed8d00145b09b5441b44bf3ea0f788e288b9e2013e8&token=422302214&lang=zh_CN&scene=21%23wechat_redirect&source=article&objectId=1909521">《DolphinScheduler分布式作业管理平台》</a></li>
+<li><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https://mp.weixin.qq.com/s?__biz=MzI0NjU2NDkzMQ==&mid=2247486115&idx=2&sn=0823d445c5f2e6079de68277a3f6d60a&chksm=e9bc1b8fdecb929933ac403f92414ad1bed8d00145b09b5441b44bf3ea0f788e288b9e2013e8&token=422302214&lang=zh_CN&scene=21%23wechat_redirect&source=article&objectId=1909521">《DolphinScheduler分布式作业管理平台》</a><br><a name="oQyXX"></a></li>
 </ul>
-<h3 id="一、补充"><a href="#一、补充" class="headerlink" title="一、补充"></a><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=http://mp.weixin.qq.com/s?__biz=MzI0NjU2NDkzMQ==&mid=2247494907&idx=1&sn=4923ca218bdbb60f12819592e7fea6f7&chksm=e9bffdd7dec874c1b354060085818929279099287563dd1a8d3b4758e8a24793ef0a5a3444b3&scene=21%23wechat_redirect&source=article&objectId=1909521">一、补充</a></h3><p>安装psmisc：<br>代码语言：javascript<br>复制</p>
+<h3 id="一、补充"><a href="#一、补充" class="headerlink" title="一、补充"></a><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=http://mp.weixin.qq.com/s?__biz=MzI0NjU2NDkzMQ==&mid=2247494907&idx=1&sn=4923ca218bdbb60f12819592e7fea6f7&chksm=e9bffdd7dec874c1b354060085818929279099287563dd1a8d3b4758e8a24793ef0a5a3444b3&scene=21%23wechat_redirect&source=article&objectId=1909521">一、补充</a></h3><p>安装psmisc：</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">apt-get install psmisc<br></code></pre></td></tr></table></figure>
-<h3 id="二、部署流程"><a href="#二、部署流程" class="headerlink" title="二、部署流程"></a><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=http://mp.weixin.qq.com/s?__biz=MzI0NjU2NDkzMQ==&mid=2247494890&idx=2&sn=788a90a7cfaa4f2698cad0e5445e3608&chksm=e9bffdc6dec874d04d4809c8dae3e67dba1e107a60ea470ca85f7edc3619ff16a1f44b5423ad&scene=21%23wechat_redirect&source=article&objectId=1909521">二、部署流程</a></h3><h4 id="1-下载二进制tar-gz包"><a href="#1-下载二进制tar-gz包" class="headerlink" title="1.下载二进制tar.gz包"></a><strong>1.下载二进制tar.gz包</strong></h4><p>下载最新版本的后端安装包至<a target="_blank" rel="noopener" href="https://cloud.tencent.com/act/pro/promotion-cvm?from_column=20065&from=20065">服务器</a>部署目录，比如创建 &#x2F;opt&#x2F;dolphinscheduler 做为安装部署目录，下载地址：<a target="_blank" rel="noopener" href="https://dlcdn.apache.org/dolphinscheduler/1.3.8/apache-dolphinscheduler-1.3.8-src.tar.gz%EF%BC%8C%E4%B8%8B%E8%BD%BD%E5%90%8E%E4%B8%8A%E4%BC%A0">https://dlcdn.apache.org/dolphinscheduler/1.3.8/apache-dolphinscheduler-1.3.8-src.tar.gz，下载后上传</a> tar 包到该目录中<br>注：此处应当下载bin文件<br><img src="https://cdn.nlark.com/yuque/0/2024/jpeg/29792214/1715239258789-462e2eed-b51e-4aa2-9950-61c991e8ac2c.jpeg#clientId=u846a0b5a-ddc0-4&from=paste&id=u472233b5&originalType=url&ratio=1&rotation=0&showTitle=false&size=55934&status=done&style=none&taskId=u0c85523b-36e4-478a-9fa6-41fad3e77aa&title=" srcset="/fzd.github.io/img/loading.gif" lazyload alt="image.jpg"><br>解压<br>代码语言：javascript<br>复制</p>
+<p><a name="DbwkW"></a></p>
+<h3 id="二、部署流程"><a href="#二、部署流程" class="headerlink" title="二、部署流程"></a><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=http://mp.weixin.qq.com/s?__biz=MzI0NjU2NDkzMQ==&mid=2247494890&idx=2&sn=788a90a7cfaa4f2698cad0e5445e3608&chksm=e9bffdc6dec874d04d4809c8dae3e67dba1e107a60ea470ca85f7edc3619ff16a1f44b5423ad&scene=21%23wechat_redirect&source=article&objectId=1909521">二、部署流程</a></h3><p><a name="wXgRp"></a></p>
+<h4 id="1-下载二进制tar-gz包"><a href="#1-下载二进制tar-gz包" class="headerlink" title="1.下载二进制tar.gz包"></a><strong>1.下载二进制tar.gz包</strong></h4><p>下载最新版本的后端安装包至<a target="_blank" rel="noopener" href="https://cloud.tencent.com/act/pro/promotion-cvm?from_column=20065&from=20065">服务器</a>部署目录，比如创建 &#x2F;opt&#x2F;dolphinscheduler 做为安装部署目录，下载地址：<a target="_blank" rel="noopener" href="https://dlcdn.apache.org/dolphinscheduler/1.3.8/apache-dolphinscheduler-1.3.8-src.tar.gz%EF%BC%8C%E4%B8%8B%E8%BD%BD%E5%90%8E%E4%B8%8A%E4%BC%A0">https://dlcdn.apache.org/dolphinscheduler/1.3.8/apache-dolphinscheduler-1.3.8-src.tar.gz，下载后上传</a> tar 包到该目录中</p>
+<p>注：此处应当下载bin文件</p>
+<p><img src="/fzd.github.io/images/3.jpeg" srcset="/fzd.github.io/img/loading.gif" lazyload alt="image.jpg"></p>
+<p>解压</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs javascript"># 创建部署目录，部署目录请不要创建在 /root、/home 等高权限目录 <br>mkdir -p /opt/dolphinscheduler<br>cd /opt/dolphinscheduler<br><br># 解压缩<br>tar -zxvf apache-dolphinscheduler-<span class="hljs-number">1.3</span><span class="hljs-number">.8</span>-bin.<span class="hljs-property">tar</span>.<span class="hljs-property">gz</span><br> <br>#重命名<br>mv apache-dolphinscheduler-<span class="hljs-number">1.3</span><span class="hljs-number">.8</span>-bin  dolphinscheduler-bin<br></code></pre></td></tr></table></figure>
-<p>笔者在&#x2F;usr&#x2F;local位置上创建dolphinscheduler文件夹，上传并解压了安装包。随后将压缩包重命名为dolphinscheduler-bin。<br>代码语言：javascript<br>复制</p>
+<p>笔者在&#x2F;usr&#x2F;local位置上创建dolphinscheduler文件夹，上传并解压了安装包。随后将压缩包重命名为dolphinscheduler-bin。</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript">mkdir dolphinscheduler<br>cd dolphinscheduler<br><br># 解压缩<br>tar -zxvf apache-dolphinscheduler-<span class="hljs-number">1.3</span><span class="hljs-number">.8</span>-bin.<span class="hljs-property">tar</span>.<span class="hljs-property">gz</span> -C<br> <br>#重命名<br>mv apache-dolphinscheduler-<span class="hljs-number">1.3</span><span class="hljs-number">.8</span>-bin  dolphinscheduler-bin<br></code></pre></td></tr></table></figure>
-<p>附：<br>查看虚拟机ip地址<br>代码语言：javascript<br>复制</p>
+<p>附：</p>
+<p>查看虚拟机ip地址</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">ifconfig<br></code></pre></td></tr></table></figure>
-<p>inet后跟的值即为ip地址<br>随后用filezilla连接虚拟机，传输文件<br><img src="https://cdn.nlark.com/yuque/0/2024/jpeg/29792214/1715239258936-e4b93fc3-1050-43aa-8532-fdac87e87caf.jpeg#clientId=u846a0b5a-ddc0-4&from=paste&id=u0d9b9890&originHeight=610&originWidth=874&originalType=url&ratio=1&rotation=0&showTitle=false&size=51947&status=done&style=none&taskId=u246d7497-1c8e-4967-9988-0e163931f58&title=" srcset="/fzd.github.io/img/loading.gif" lazyload alt="image.jpg"><br>主机号即为刚刚查询的结果，协议选择SFTP而不是默认的FTP，用户名为虚拟机系统的用户名而不是linux终端terminal的用户。<br>连接成功后即可看到linux文件目录，用拖拽的方式即可传输文件。<br>笔者此处遇到权限问题：<br>filezilla报错：<br>代码语言：javascript<br>复制</p>
+<p>inet后跟的值即为ip地址</p>
+<p>随后用filezilla连接虚拟机，传输文件</p>
+<p><img src="/fzd.github.io/images/4.jpeg" srcset="/fzd.github.io/img/loading.gif" lazyload alt="image.jpg"></p>
+<p>主机号即为刚刚查询的结果，协议选择SFTP而不是默认的FTP，用户名为虚拟机系统的用户名而不是linux终端terminal的用户。</p>
+<p>连接成功后即可看到linux文件目录，用拖拽的方式即可传输文件。</p>
+<p>笔者此处遇到权限问题：</p>
+<p>filezilla报错：</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">命令:    put <span class="hljs-string">&quot;C:\Users\86136\Desktop\apache-dolphinscheduler-1.3.8-src.tar.gz&quot;</span> <span class="hljs-string">&quot;apache-dolphinscheduler-1.3.8-src.tar.gz&quot;</span><br>错误: <span class="hljs-regexp">/usr/</span>local/dolphinscheduler/apache-dolphinscheduler-<span class="hljs-number">1.3</span><span class="hljs-number">.8</span>-src.<span class="hljs-property">tar</span>.<span class="hljs-property">gz</span>: open <span class="hljs-keyword">for</span> <span class="hljs-attr">write</span>: permission denied<br>错误:    文件传输失败<br></code></pre></td></tr></table></figure>
-<p>在虚拟机上授权<br>代码语言：javascript<br>复制</p>
+<p>在虚拟机上授权</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">sudo chmod <span class="hljs-number">777</span> /usr/local/dolphinscheduler<br></code></pre></td></tr></table></figure>
-<p>重新传输，问题解决。<br>实际上，在安装filezilla后直接拖拽文件进虚拟机界面也能实现文件传输，但就笔者而言这一操作偶尔能够成功但常常导致系统死机。</p>
+<p>重新传输，问题解决。</p>
+<p>实际上，在安装filezilla后直接拖拽文件进虚拟机界面也能实现文件传输，但就笔者而言这一操作偶尔能够成功但常常导致系统死机。<br><a name="sD0OK"></a></p>
 <h4 id="2-创建部署用户并赋予目录操作权限"><a href="#2-创建部署用户并赋予目录操作权限" class="headerlink" title="2.创建部署用户并赋予目录操作权限"></a><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=http://mp.weixin.qq.com/s?__biz=MzI0NjU2NDkzMQ==&mid=2247494890&idx=2&sn=788a90a7cfaa4f2698cad0e5445e3608&chksm=e9bffdc6dec874d04d4809c8dae3e67dba1e107a60ea470ca85f7edc3619ff16a1f44b5423ad&scene=21%23wechat_redirect&source=article&objectId=1909521">2.创建部署用户并赋予目录操作权限</a></h4><ul>
 <li>创建部署用户，并且一定要配置 sudo 免密。以创建 dolphinscheduler 用户为例</li>
 </ul>
-<p>代码语言：javascript<br>复制</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"># 创建用户需使用 root 登录<br>useradd dolphinscheduler<br><br># 添加密码<br>echo <span class="hljs-string">&quot;dolphinscheduler&quot;</span> | passwd --stdin dolphinscheduler<br><br># 配置 sudo 免密<br>sed -i <span class="hljs-string">&#x27;$adolphinscheduler  ALL=(ALL)  NOPASSWD: NOPASSWD: ALL&#x27;</span> /etc/sudoers<br>sed -i <span class="hljs-string">&#x27;s/Defaults    requirett/#Defaults    requirett/g&#x27;</span> /etc/sudoers<br><br># 修改目录权限，使得部署用户对 dolphinscheduler-bin 目录有操作权限<br>chown -R <span class="hljs-attr">dolphinscheduler</span>:dolphinscheduler dolphinscheduler-bin<br></code></pre></td></tr></table></figure>
 <p>注意：</p>
 <ul>
@@ -311,117 +354,206 @@
 <li>如果发现 &#x2F;etc&#x2F;sudoers 文件中有 “Defaults requirett” 这行，也请注释掉</li>
 <li>如果用到资源上传的话，还需要给该部署用户分配操作本地文件系统或者 HDFS 或者 MinIO的权限</li>
 </ul>
-<p>坑：<br>代码语言：javascript<br>复制</p>
+<p>坑：</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">echo <span class="hljs-string">&quot;dolphinscheduler&quot;</span> | passwd --stdin dolphinscheduler<br></code></pre></td></tr></table></figure>
-<p>这步会报错。linux的passwd命令没有–stdin的语法<br>应该用<br>代码语言：javascript<br>复制</p>
+<p>这步会报错。linux的passwd命令没有–stdin的语法</p>
+<p>应该用</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">echo <span class="hljs-string">&quot;dolphinscheduler:123456&quot;</span> | chpasswd<br></code></pre></td></tr></table></figure>
-<p>修改用户dolphinscheduler密码为123456<br>另外这五条指令在第一次成功运行时都没有运行成功提示。</p>
+<p>修改用户dolphinscheduler密码为123456</p>
+<p>另外这五条指令在第一次成功运行时都没有运行成功提示。<br><a name="rNXB2"></a></p>
 <h4 id="3-ssh免密配置"><a href="#3-ssh免密配置" class="headerlink" title="3.ssh免密配置"></a><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=http://mp.weixin.qq.com/s?__biz=MzI0NjU2NDkzMQ==&mid=2247494755&idx=3&sn=2e407bda03e3a392387a1f276f554927&chksm=e9bffd4fdec8745963dc186d565a7077e1dc7e4d05e3099f105aaec5111ef013a6dfe1779376&scene=21%23wechat_redirect&source=article&objectId=1909521">3.ssh免密配置</a></h4><ul>
 <li>切换到部署用户并配置 ssh 本机免密登录</li>
 </ul>
-<p>代码语言：javascript<br>复制</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">su dolphinscheduler<br><br>ssh-keygen -t rsa -P <span class="hljs-string">&#x27;&#x27;</span> -f ~<span class="hljs-regexp">/.ssh/i</span>d_rsa<br>cat ~<span class="hljs-regexp">/.ssh/i</span>d_rsa.<span class="hljs-property">pub</span> &gt;&gt; ~<span class="hljs-regexp">/.ssh/</span>authorized_keys<br>chmod <span class="hljs-number">600</span> ~<span class="hljs-regexp">/.ssh/</span>authorized_keys<br></code></pre></td></tr></table></figure>
-<p>注意：正常设置后，dolphinscheduler 用户在执行命令 ssh localhost 是不需要再输入密码的<br>坑：这里运行会报错Could not create directory ‘&#x2F;home&#x2F;dolphinscheduler&#x2F;.ssh<br>需要先以root身份在&#x2F;home下创建dolphinscheduler目录再在dolphinscheduler里创建.ssh目录，<br>然后切换回dolphinscheduler用户执行。除此之外可能还需要对这些目录进行授权。</p>
+<p>注意：正常设置后，dolphinscheduler 用户在执行命令 ssh localhost 是不需要再输入密码的</p>
+<p>坑：这里运行会报错Could not create directory ‘&#x2F;home&#x2F;dolphinscheduler&#x2F;.ssh</p>
+<p>需要先以root身份在&#x2F;home下创建dolphinscheduler目录再在dolphinscheduler里创建.ssh目录，</p>
+<p>然后切换回dolphinscheduler用户执行。除此之外可能还需要对这些目录进行授权。<br><a name="XjudP"></a></p>
 <h4 id="4-数据库初始化"><a href="#4-数据库初始化" class="headerlink" title="4.数据库初始化"></a><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=http://mp.weixin.qq.com/s?__biz=MzI0NjU2NDkzMQ==&mid=2247494354&idx=1&sn=50123991ffe4e806bd18dc393e28efb5&chksm=e9bffbfedec872e87451bbacab6e7586452d42b3ae7f0b2789f12437e9dcf37c877867711e11&scene=21%23wechat_redirect&source=article&objectId=1909521">4.数据库初始化</a></h4><ul>
 <li>进入数据库，默认数据库是 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/product/postgresql?from_column=20065&from=20065">PostgreSQL</a>，如选择 MySQL 的话，后续需要添加 mysql-connector-java 驱动包到 DolphinScheduler 的 lib 目录下</li>
 </ul>
-<p>mysql-connector-java下载网址：MySQL :: Download Connector&#x2F;J<br>注意切换下载linux版并且注意对应版本号。<br>这里对应的主要是ubuntu的版本而不是linux版本。<br><img src="https://cdn.nlark.com/yuque/0/2024/jpeg/29792214/1715239258889-cfd98bfb-3ebf-4196-b269-a46682624e62.jpeg#clientId=u846a0b5a-ddc0-4&from=paste&id=u9c242e8a&originHeight=422&originWidth=953&originalType=url&ratio=1&rotation=0&showTitle=false&size=41683&status=done&style=none&taskId=u49421081-b40b-41c4-a6dd-d8fc2061863&title=" srcset="/fzd.github.io/img/loading.gif" lazyload alt="image.jpg"><br>查看ubuntu版本的方法 ：<br>代码语言：javascript<br>复制</p>
+<p>mysql-connector-java下载网址：MySQL :: Download Connector&#x2F;J</p>
+<p>注意切换下载linux版并且注意对应版本号。</p>
+<p>这里对应的主要是ubuntu的版本而不是linux版本。</p>
+<p><img src="/fzd.github.io/images/5.jpeg" srcset="/fzd.github.io/img/loading.gif" lazyload alt="image.jpg"></p>
+<p>查看ubuntu版本的方法 ：</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">cat /proc/version<br></code></pre></td></tr></table></figure>
-<p>结果如下：<br><img src="https://cdn.nlark.com/yuque/0/2024/jpeg/29792214/1715239282851-e63ac640-8f95-45f7-ae7c-9e32e5218c39.jpeg#clientId=u846a0b5a-ddc0-4&from=paste&id=u56bd7de0&originHeight=34&originWidth=735&originalType=url&ratio=1&rotation=0&showTitle=false&size=10423&status=done&style=none&taskId=udbacdb88-6409-430d-a919-f015ccbf10f&title=" srcset="/fzd.github.io/img/loading.gif" lazyload alt="image.jpg"><br>笔者用的18.04版本<br>下载好后放到DolphinScheduler 的 lib 目录下解压<br>但是笔者此处遇到一点问题，下载下来的文件解压后的结果似乎并不太常规，没法简单地tar解包<br>解决方法是在windows中解压，然后打开解压出的压缩包，该压缩包里.&#x2F;usr&#x2F;share&#x2F;java里有我们需要的mysql-connector-java-8.0.26.jar，取出来传入linux的lib文件夹下。<br>之后执行如下指令进入数据库：<br>代码语言：javascript<br>复制</p>
+<p>结果如下：</p>
+<p><img src="/fzd.github.io/images/6.jpeg" srcset="/fzd.github.io/img/loading.gif" lazyload alt="image.jpg"></p>
+<p>笔者用的18.04版本</p>
+<p>下载好后放到DolphinScheduler 的 lib 目录下解压</p>
+<p>但是笔者此处遇到一点问题，下载下来的文件解压后的结果似乎并不太常规，没法简单地tar解包</p>
+<p>解决方法是在windows中解压，然后打开解压出的压缩包，该压缩包里.&#x2F;usr&#x2F;share&#x2F;java里有我们需要的mysql-connector-java-8.0.26.jar，取出来传入linux的lib文件夹下。</p>
+<p>之后执行如下指令进入数据库：</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">#启动mysql服务<br>service mysql start<br><br>#登录<br>mysql -uroot -p<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>此处遇到了另一个问题，运行service mysql start报错Failed to start mysql.service: Unit mysql.service not found.</li>
 <li>解决方法：</li>
 </ul>
-<p>代码语言：javascript<br>复制</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript">#查询/etc/init.<span class="hljs-property">d</span>/下是否存在mysql，无结果说明不存在<br>ll /etc/init.<span class="hljs-property">d</span>/ | grep mysql<br><br>#查询mysql.<span class="hljs-property">server</span>所在位置<br>find / -name mysql.<span class="hljs-property">server</span><br><br>#把mysql.<span class="hljs-property">server</span>复制过去，其中/usr/local/mysql/是笔者的mysql安装目录<br>cp /usr/local/mysql/support-files/mysql.<span class="hljs-property">server</span> /etc/init.<span class="hljs-property">d</span>/mysql<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>进入数据库命令行窗口后，执行数据库初始化命令，设置访问账号和密码。注: {user} 和 {password} 需要替换为具体的数据库用户名和密码</li>
 </ul>
-<p>代码语言：javascript<br>复制</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript">mysql&gt; <span class="hljs-variable constant_">CREATE</span> <span class="hljs-variable constant_">DATABASE</span> dolphinscheduler <span class="hljs-variable constant_">DEFAULT</span> <span class="hljs-variable constant_">CHARACTER</span> <span class="hljs-variable constant_">SET</span> utf8 <span class="hljs-variable constant_">DEFAULT</span> <span class="hljs-variable constant_">COLLATE</span> utf8_general_ci;<br>   mysql&gt; <span class="hljs-variable constant_">GRANT</span> <span class="hljs-variable constant_">ALL</span> <span class="hljs-variable constant_">PRIVILEGES</span> <span class="hljs-variable constant_">ON</span> dolphinscheduler.* <span class="hljs-variable constant_">TO</span> <span class="hljs-string">&#x27;&#123;user&#125;&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span> <span class="hljs-variable constant_">IDENTIFIED</span> <span class="hljs-variable constant_">BY</span> <span class="hljs-string">&#x27;&#123;password&#125;&#x27;</span>;<br>   mysql&gt; <span class="hljs-variable constant_">GRANT</span> <span class="hljs-variable constant_">ALL</span> <span class="hljs-variable constant_">PRIVILEGES</span> <span class="hljs-variable constant_">ON</span> dolphinscheduler.* <span class="hljs-variable constant_">TO</span> <span class="hljs-string">&#x27;&#123;user&#125;&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span> <span class="hljs-variable constant_">IDENTIFIED</span> <span class="hljs-variable constant_">BY</span> <span class="hljs-string">&#x27;&#123;password&#125;&#x27;</span>;<br>   mysql&gt; flush privileges;<br></code></pre></td></tr></table></figure>
-<p>注：如果需要查看mysql中的用户及其密码可使用如下代码<br>代码语言：javascript<br>复制</p>
+<p>注：如果需要查看mysql中的用户及其密码可使用如下代码</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable constant_">SELECT</span> <span class="hljs-title class_">User</span>, <span class="hljs-title class_">Host</span>, <span class="hljs-title class_">Password</span> <span class="hljs-variable constant_">FROM</span> mysql.<span class="hljs-property">user</span>;<br></code></pre></td></tr></table></figure>
-<p>创建表和导入基础数据<br>首先退出sql(按Ctrl+c)<br>接下来修改 conf 目录下 datasource.properties 中的下列配置<br>代码语言：javascript<br>复制</p>
+<p>创建表和导入基础数据</p>
+<p>首先退出sql(按Ctrl+c)</p>
+<p>接下来修改 conf 目录下 datasource.properties 中的下列配置</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">cd /usr/local/dolphinscheduler/dolphinscheduler-bin<br><br>vi conf/datasource.<span class="hljs-property">properties</span><br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>如果选择 MySQL，请注释(用‘#’)掉 PostgreSQL 相关配置(反之同理)，还需要手动添加 [ mysql-connector-java 驱动 jar ] 包到 lib 目录下，这里下载的是 mysql-connector-java-5.1.47.jar，然后正确配置数据库连接相关信息</li>
 <li>提示：切换至英文输入法，输入i进入修改状态，方向键改变光标位置，完成后先按Esc退出插入状态，再输入:wq保存并退出。:q可用来直接退出而不保存。</li>
 </ul>
-<p>代码语言：javascript<br>复制</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"># postgre<br>  # spring.<span class="hljs-property">datasource</span>.<span class="hljs-property">driver</span>-<span class="hljs-keyword">class</span>-name=org.<span class="hljs-property">postgresql</span>.<span class="hljs-property">Driver</span><br>  # spring.<span class="hljs-property">datasource</span>.<span class="hljs-property">url</span>=<span class="hljs-attr">jdbc</span>:<span class="hljs-attr">postgresql</span>:<span class="hljs-comment">//localhost:5432/dolphinscheduler</span><br>  # mysql<br>  spring.<span class="hljs-property">datasource</span>.<span class="hljs-property">driver</span>-<span class="hljs-keyword">class</span>-name=com.<span class="hljs-property">mysql</span>.<span class="hljs-property">jdbc</span>.<span class="hljs-property">Driver</span><br>  spring.<span class="hljs-property">datasource</span>.<span class="hljs-property">url</span>=<span class="hljs-attr">jdbc</span>:<span class="hljs-attr">mysql</span>:<span class="hljs-comment">//xxx:3306/dolphinscheduler?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true     # 需要修改ip，本机localhost即可</span><br>  spring.<span class="hljs-property">datasource</span>.<span class="hljs-property">username</span>=xxx      # 需要修改为上面的&#123;user&#125;值<br>  spring.<span class="hljs-property">datasource</span>.<span class="hljs-property">password</span>=xxx      # 需要修改为上面的&#123;password&#125;值<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>先把PostgreSQL 相关的代码注释掉，然后注意修改这里的xxx</li>
 <li>修改并保存完后，执行 script 目录下的创建表及导入基础数据脚本</li>
 </ul>
-<p>代码语言：javascript<br>复制</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">sh script/create-dolphinscheduler.<span class="hljs-property">sh</span><br></code></pre></td></tr></table></figure>
-<p>注意: 如果执行上述脚本提示 “&#x2F;bin&#x2F;java: No such file or directory” 错误，请在 &#x2F;etc&#x2F;profile 下配置 JAVA_HOME 及 PATH 变量<br>正好笔者此处也遇到了类似的问题：<br>script&#x2F;create-dolphinscheduler.sh: 37: script&#x2F;create-dolphinscheduler.sh: &#x2F;bin&#x2F;java: not found<br>那么我们就按照提示进入&#x2F;etc文件夹下的profile文件进行编辑吧：<br>代码语言：javascript<br>复制</p>
+<p>注意: 如果执行上述脚本提示 “&#x2F;bin&#x2F;java: No such file or directory” 错误，请在 &#x2F;etc&#x2F;profile 下配置 JAVA_HOME 及 PATH 变量</p>
+<p>正好笔者此处也遇到了类似的问题：</p>
+<p>script&#x2F;create-dolphinscheduler.sh: 37: script&#x2F;create-dolphinscheduler.sh: &#x2F;bin&#x2F;java: not found</p>
+<p>那么我们就按照提示进入&#x2F;etc文件夹下的profile文件进行编辑吧：</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">vi /etc/profile<br></code></pre></td></tr></table></figure>
-<p>在最下方添加如下代码：<br>代码语言：javascript<br>复制</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable constant_">JAVA_HOME</span>=<span class="hljs-regexp">/usr/</span>lib/jvm/java-<span class="hljs-number">8</span>-openjdk-amd64<br><span class="hljs-variable constant_">JRE_HOME</span>=<span class="hljs-regexp">/usr/</span>lib/jvm/java-<span class="hljs-number">8</span>-openjdk-amd64/jre<br><span class="hljs-variable constant_">PATH</span>=$JAVA_HOME/<span class="hljs-attr">bin</span>:$JRE_HOME/<span class="hljs-attr">bin</span>:$PATH<br><span class="hljs-variable constant_">CLASSPATH</span>=.:$JAVA_HOME/lib/dt.<span class="hljs-property">jar</span>:$JAVA_HOME/lib/tools.<span class="hljs-property">jar</span>:$JRE_HOME/lib<br><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">JAVA_HOME</span> <span class="hljs-variable constant_">JRE_HOME</span> <span class="hljs-variable constant_">PATH</span> <span class="hljs-variable constant_">CLASSPATH</span><br></code></pre></td></tr></table></figure>
+<p>在最下方添加如下代码：</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable constant_">JAVA_HOME</span>=<span class="hljs-regexp">/usr/</span>lib/jvm/java-<span class="hljs-number">8</span>-openjdk-amd64<br><span class="hljs-variable constant_">JRE_HOME</span>=<span class="hljs-regexp">/usr/</span>lib/jvm/java-<span class="hljs-number">8</span>-openjdk-amd64/jre<br><span class="hljs-variable constant_">PATH</span>=<br><br>$$<br><span class="hljs-variable constant_">JAVA_HOME</span>/<span class="hljs-attr">bin</span>:$JRE_HOME/<span class="hljs-attr">bin</span>:<br>$$<br><span class="hljs-variable constant_">PATH</span><br><span class="hljs-variable constant_">CLASSPATH</span>=.:<br><br>$$<br><span class="hljs-variable constant_">JAVA_HOME</span>/lib/dt.<span class="hljs-property">jar</span>:$JAVA_HOME/lib/tools.<span class="hljs-property">jar</span>:<br>$$<br><span class="hljs-variable constant_">JRE_HOME</span>/lib<br><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">JAVA_HOME</span> <span class="hljs-variable constant_">JRE_HOME</span> <span class="hljs-variable constant_">PATH</span> <span class="hljs-variable constant_">CLASSPATH</span><br></code></pre></td></tr></table></figure>
 <blockquote>
 <p>当然此处可能由于每个人jdk所在位置以及版本不同而需要做出适当修改。 如果之前使用的npm安装jdk，那么jdk很有可能被安装在&#x2F;usr&#x2F;lib&#x2F;jvm目录下 而我们所需的java文件地址为：&#x2F;usr&#x2F;lib&#x2F;jvm&#x2F;java-8-openjdk-amd64&#x2F;bin&#x2F;java （此处可能略有不同）</p>
 </blockquote>
-<p>:wq保存退出。<br>之后再敲入如下代码：<br>代码语言：javascript<br>复制</p>
+<p>:wq保存退出。</p>
+<p>之后再敲入如下代码：</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">source /etc/profile   <span class="hljs-comment">//使修改立即生效</span><br>echo $JAVA_HOME <span class="hljs-comment">//查看JAVA_HOME的值</span><br>javac -version<br></code></pre></td></tr></table></figure>
-<p>第一条使设置生效，二三条检验配置是否成功。</p>
+<p>第一条使设置生效，二三条检验配置是否成功。<br><a name="JspqL"></a></p>
 <h4 id="5-修改运行参数"><a href="#5-修改运行参数" class="headerlink" title="5.修改运行参数"></a><strong>5.修改运行参数</strong></h4><ul>
 <li>修改 &#x2F;usr&#x2F;local&#x2F;dolphinscheduler&#x2F;dolphinscheduler-bin&#x2F;conf&#x2F;env 目录下的 dolphinscheduler_env.sh 环境变量(以相关用到的软件都安装在 &#x2F;opt&#x2F;soft 下为例)</li>
 </ul>
-<p>代码语言：javascript<br>复制</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">vi /usr/local/dolphinscheduler/dolphinscheduler-bin/conf/env/dolphinscheduler_env.<span class="hljs-property">sh</span><br></code></pre></td></tr></table></figure>
-<p>注释export SPARK_HOME1&#x3D;&#x2F;opt&#x2F;soft&#x2F;spark1这行<br>export DATAX_HOME&#x3D;&#x2F;opt&#x2F;soft&#x2F;datax&#x2F;bin&#x2F;datax这行加上.py<br>代码语言：javascript<br>复制</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">HADOOP_HOME</span>=<span class="hljs-regexp">/opt/</span>soft/hadoop<br><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">HADOOP_CONF_DIR</span>=<span class="hljs-regexp">/opt/</span>soft/hadoop/etc/hadoop<br># <span class="hljs-keyword">export</span> <span class="hljs-variable constant_">SPARK_HOME1</span>=<span class="hljs-regexp">/opt/</span>soft/spark1<br><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">SPARK_HOME2</span>=<span class="hljs-regexp">/opt/</span>soft/spark2<br><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">PYTHON_HOME</span>=<span class="hljs-regexp">/opt/</span>soft/python<br><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">JAVA_HOME</span>=<span class="hljs-regexp">/opt/</span>soft/java<br><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">HIVE_HOME</span>=<span class="hljs-regexp">/opt/</span>soft/hive<br><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">FLINK_HOME</span>=<span class="hljs-regexp">/opt/</span>soft/flink<br><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">DATAX_HOME</span>=<span class="hljs-regexp">/opt/</span>soft/datax/bin/datax.<span class="hljs-property">py</span><br><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">PATH</span>=$HADOOP_HOME/<span class="hljs-attr">bin</span>:$SPARK_HOME2/<span class="hljs-attr">bin</span>:<span class="hljs-attr">$PYTHON_HOME</span>:$JAVA_HOME/<span class="hljs-attr">bin</span>:$HIVE_HOME/<span class="hljs-attr">bin</span>:$FLINK_HOME/<span class="hljs-attr">bin</span>:<span class="hljs-attr">$DATAX_HOME</span>:$PATH<br></code></pre></td></tr></table></figure>
+<p>注释export SPARK_HOME1&#x3D;&#x2F;opt&#x2F;soft&#x2F;spark1这行</p>
+<p>export DATAX_HOME&#x3D;&#x2F;opt&#x2F;soft&#x2F;datax&#x2F;bin&#x2F;datax这行加上.py</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">HADOOP_HOME</span>=<span class="hljs-regexp">/opt/</span>soft/hadoop<br><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">HADOOP_CONF_DIR</span>=<span class="hljs-regexp">/opt/</span>soft/hadoop/etc/hadoop<br># <span class="hljs-keyword">export</span> <span class="hljs-variable constant_">SPARK_HOME1</span>=<span class="hljs-regexp">/opt/</span>soft/spark1<br><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">SPARK_HOME2</span>=<span class="hljs-regexp">/opt/</span>soft/spark2<br><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">PYTHON_HOME</span>=<span class="hljs-regexp">/opt/</span>soft/python<br><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">JAVA_HOME</span>=<span class="hljs-regexp">/opt/</span>soft/java<br><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">HIVE_HOME</span>=<span class="hljs-regexp">/opt/</span>soft/hive<br><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">FLINK_HOME</span>=<span class="hljs-regexp">/opt/</span>soft/flink<br><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">DATAX_HOME</span>=<span class="hljs-regexp">/opt/</span>soft/datax/bin/datax.<span class="hljs-property">py</span><br><span class="hljs-keyword">export</span> <span class="hljs-variable constant_">PATH</span>=<br><br>$$<br><span class="hljs-variable constant_">HADOOP_HOME</span>/<span class="hljs-attr">bin</span>:$SPARK_HOME2/<span class="hljs-attr">bin</span>:<span class="hljs-attr">$PYTHON_HOME</span>:$JAVA_HOME/<span class="hljs-attr">bin</span>:$HIVE_HOME/<span class="hljs-attr">bin</span>:$FLINK_HOME/<span class="hljs-attr">bin</span>:<span class="hljs-attr">$DATAX_HOME</span>:<br>$$<br><span class="hljs-variable constant_">PATH</span><br></code></pre></td></tr></table></figure>
 <p>注意: 这一步非常重要，例如 JAVA_HOME 和 PATH 是必须要配置的，没有用到的可以忽略或者注释掉；如果找不到 dolphinscheduler_env.sh，请运行 ls -a</p>
 <ul>
 <li>将 jdk 软链到 &#x2F;usr&#x2F;bin&#x2F;java 下(仍以 JAVA_HOME&#x3D;&#x2F;opt&#x2F;soft&#x2F;java 为例)</li>
 </ul>
-<p>代码语言：javascript<br>复制</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">sudo ln -s /opt/soft/java/bin/java /usr/bin/java<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>修改一键部署配置文件conf&#x2F;config&#x2F;install_config.conf中的各参数，特别注意以下参数的配置</li>
 </ul>
-<p>代码语言：javascript<br>复制</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">vim /usr/local/dolphinscheduler/dolphinscheduler-bin/conf/config/install_config.<span class="hljs-property">conf</span><br></code></pre></td></tr></table></figure>
-<p>代码语言：javascript<br>复制</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><code class="hljs javascript"># 这里填 mysql or postgresql<br>dbtype=<span class="hljs-string">&quot;mysql&quot;</span><br><br># 数据库连接地址<br>dbhost=<span class="hljs-string">&quot;localhost:3306&quot;</span><br><br># 数据库名<br>dbname=<span class="hljs-string">&quot;dolphinscheduler&quot;</span><br><br># 数据库用户名，此处需要修改为上面设置的 &#123;user&#125; 具体值<br>username=<span class="hljs-string">&quot;xxx&quot;</span>    <br><br># 数据库密码，如果有特殊字符，请使用 \ 转义，需要修改为上面设置的 &#123;password&#125; 具体值<br>password=<span class="hljs-string">&quot;xxx&quot;</span><br><br># <span class="hljs-title class_">Zookeeper</span>地址，单机本机是 <span class="hljs-attr">localhost</span>:<span class="hljs-number">2181</span>，记得把 <span class="hljs-number">2181</span> 端口带上<br>zkQuorum=<span class="hljs-string">&quot;localhost:2181&quot;</span><br><br># 将 <span class="hljs-variable constant_">DS</span> 安装到哪个目录，如: <span class="hljs-regexp">/opt/</span>soft/dolphinscheduler，不同于现在的目录<br>installPath=<span class="hljs-string">&quot;/opt/soft/dolphinscheduler&quot;</span><br><br># 使用哪个用户部署，使用第 <span class="hljs-number">3</span> 节创建的用户<br>deployUser=<span class="hljs-string">&quot;dolphinscheduler&quot;</span><br><br># 邮件配置，以 qq 邮箱为例<br># 邮件协议<br>mailProtocol=<span class="hljs-string">&quot;SMTP&quot;</span><br><br># 邮件服务地址<br>mailServerHost=<span class="hljs-string">&quot;smtp.qq.com&quot;</span><br><br># 邮件服务端口<br>mailServerPort=<span class="hljs-string">&quot;25&quot;</span><br><br># mailSender 和 mailUser 配置成一样即可<br># 发送者<br>mailSender=<span class="hljs-string">&quot;xxx@qq.com&quot;</span><br><br># 发送用户<br>mailUser=<span class="hljs-string">&quot;xxx@qq.com&quot;</span><br><br># 邮箱密码<br>mailPassword=<span class="hljs-string">&quot;xxx&quot;</span><br><br># <span class="hljs-variable constant_">TLS</span> 协议的邮箱设置为 <span class="hljs-literal">true</span>，否则设置为 <span class="hljs-literal">false</span><br>starttlsEnable=<span class="hljs-string">&quot;true&quot;</span><br><br># 开启 <span class="hljs-variable constant_">SSL</span> 协议的邮箱配置为 <span class="hljs-literal">true</span>，否则为 <span class="hljs-literal">false</span>。注意: starttlsEnable 和 sslEnable 不能同时为 <span class="hljs-literal">true</span><br>sslEnable=<span class="hljs-string">&quot;false&quot;</span><br><br># 邮件服务地址值，参考上面 mailServerHost<br>sslTrust=<span class="hljs-string">&quot;smtp.qq.com&quot;</span><br><br># 业务用到的比如 sql 等资源文件上传到哪里，可以设置：<span class="hljs-variable constant_">HDFS</span>,<span class="hljs-variable constant_">S3</span>,<span class="hljs-variable constant_">NONE</span>，单机如果想使用本地文件系统，请配置为 <span class="hljs-variable constant_">HDFS</span>，因为 <span class="hljs-variable constant_">HDFS</span> 支持本地文件系统；如果不需要资源上传功能请选择 <span class="hljs-variable constant_">NONE</span>。强调一点：使用本地文件系统不需要部署 hadoop<br>resourceStorageType=<span class="hljs-string">&quot;HDFS&quot;</span><br><br># 这里以保存到本地文件系统为例<br># 注：但是如果你想上传到 <span class="hljs-variable constant_">HDFS</span> 的话，<span class="hljs-title class_">NameNode</span> 启用了 <span class="hljs-variable constant_">HA</span>，则需要将 hadoop 的配置文件 core-site.<span class="hljs-property">xml</span> 和 hdfs-site.<span class="hljs-property">xml</span> 放到 conf 目录下，本例即是放到 /opt/dolphinscheduler/conf 下面，并配置 namenode cluster 名称；如果 <span class="hljs-title class_">NameNode</span> 不是 <span class="hljs-variable constant_">HA</span>，则修改为具体的 ip 或者主机名即可<br>defaultFS=<span class="hljs-string">&quot;file:///data/dolphinscheduler&quot;</span>    #<span class="hljs-attr">hdfs</span>:<span class="hljs-comment">//&#123;具体的ip/主机名&#125;:8020</span><br><br># 如果没有使用到 <span class="hljs-title class_">Yarn</span>，保持以下默认值即可；如果 <span class="hljs-title class_">ResourceManager</span> 是 <span class="hljs-variable constant_">HA</span>，则配置为 <span class="hljs-title class_">ResourceManager</span> 节点的主备 ip 或者 hostname，比如 <span class="hljs-string">&quot;192.168.xx.xx,192.168.xx.xx&quot;</span> ;如果是单 <span class="hljs-title class_">ResourceManager</span> 请配置 yarnHaIps=<span class="hljs-string">&quot;&quot;</span> 即可<br># 注：依赖于yarn执行的任务，为了保证执行结果判断成功，需要确保yarn信息配置正确<br>yarnHaIps=<span class="hljs-string">&quot;192.168.xx.xx,192.168.xx.xx&quot;</span><br><br># 如果 <span class="hljs-title class_">ResourceManager</span> 是 <span class="hljs-variable constant_">HA</span> 或者没有使用到 <span class="hljs-title class_">Yarn</span> 保持默认值即可；如果是单 <span class="hljs-title class_">ResourceManager</span>，请配置真实的 <span class="hljs-title class_">ResourceManager</span> 主机名或者 ip<br>singleYarnIp=<span class="hljs-string">&quot;yarnIp1&quot;</span><br><br># 资源上传根路径，支持 <span class="hljs-variable constant_">HDFS</span> 和 <span class="hljs-variable constant_">S3</span>，由于 hdfs 支持本地文件系统，需要确保本地文件夹存在且有读写权限<br>resourceUploadPath=<span class="hljs-string">&quot;/data/dolphinscheduler&quot;</span><br><br># 具备权限创建 resourceUploadPath的用户<br>hdfsRootUser=<span class="hljs-string">&quot;hdfs&quot;</span><br>    <br># 配置 api server port<br>apiServerPort=<span class="hljs-string">&quot;12345&quot;</span><br><br># 在哪些机器上部署 <span class="hljs-variable constant_">DS</span> 服务，本机选 localhost<br>ips=<span class="hljs-string">&quot;localhost&quot;</span><br><br># ssh端口，默认<span class="hljs-number">22</span><br>sshPort=<span class="hljs-string">&quot;22&quot;</span><br><br># master服务部署在哪台机器上<br>masters=<span class="hljs-string">&quot;localhost&quot;</span><br><br># worker服务部署在哪台机器上，并指定此 worker 属于哪一个 worker 组，下面示例的 <span class="hljs-keyword">default</span> 即为组名<br>workers=<span class="hljs-string">&quot;localhost:default&quot;</span><br><br># 报警服务部署在哪台机器上<br>alertServer=<span class="hljs-string">&quot;localhost&quot;</span><br><br># 后端api服务部署在在哪台机器上<br>apiServers=<span class="hljs-string">&quot;localhost&quot;</span><br></code></pre></td></tr></table></figure>
-<p>注：如果打算用到 资源中心 功能，请执行以下命令：<br>代码语言：javascript<br>复制</p>
+<p>注：如果打算用到 资源中心 功能，请执行以下命令：</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript">sudo mkdir /data/dolphinscheduler<br>sudo chown -R <span class="hljs-attr">dolphinscheduler</span>:dolphinscheduler /data/dolphinscheduler<br></code></pre></td></tr></table></figure>
+<p><a name="G5YFg"></a></p>
 <h4 id="6-一键部署"><a href="#6-一键部署" class="headerlink" title="6.一键部署"></a><strong>6.一键部署</strong></h4><ul>
 <li>切换到部署用户，执行一键部署脚本</li>
 </ul>
-<p>代码语言：javascript<br>复制</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">sh install.<span class="hljs-property">sh</span><br></code></pre></td></tr></table></figure>
-<p>注意：第一次部署的话，在运行中第3步 3,stop server 出现 5 次以下信息，此信息可以忽略<br>代码语言：javascript<br>复制</p>
+<p>注意：第一次部署的话，在运行中第3步 3,stop server 出现 5 次以下信息，此信息可以忽略</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-attr">sh</span>: bin/dolphinscheduler-daemon.<span class="hljs-property">sh</span>: <span class="hljs-title class_">No</span> such file or directory<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>运行时报错：install.sh: 22: install.sh: source: not found 1.replace file install.sh: 28: install.sh: [[: not found install.sh: 34: [: &#x3D;&#x3D;: unexpected operator 2.create directory 3.scp resources &#x2F;usr&#x2F;local&#x2F;dolphinscheduler&#x2F;dolphinscheduler-bin&#x2F;script&#x2F;scp-hosts.sh: 21: &#x2F;usr&#x2F;local&#x2F;dolphinscheduler&#x2F;dolphinscheduler-bin&#x2F;script&#x2F;scp-hosts.sh: source: not found &#x2F;usr&#x2F;local&#x2F;dolphinscheduler&#x2F;dolphinscheduler-bin&#x2F;script&#x2F;scp-hosts.sh: 24: &#x2F;usr&#x2F;local&#x2F;dolphinscheduler&#x2F;dolphinscheduler-bin&#x2F;script&#x2F;scp-hosts.sh: [[: not found &#x2F;usr&#x2F;local&#x2F;dolphinscheduler&#x2F;dolphinscheduler-bin&#x2F;script&#x2F;scp-hosts.sh: 29: &#x2F;usr&#x2F;local&#x2F;dolphinscheduler&#x2F;dolphinscheduler-bin&#x2F;script&#x2F;scp-hosts.sh: Syntax error: “(“ unexpected scp copy failed to exit</li>
 </ul>
-<p>原因：默认使用dash作为shell，但sh是bash shell的命令。<br>解决方案：<br>代码语言：javascript<br>复制</p>
+<p>原因：默认使用dash作为shell，但sh是bash shell的命令。</p>
+<p>解决方案：</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">dpkg-reconfigure dash（需要root权限）<br>在界面中选择no<br>再运行ls -l /bin/sh 后显示/bin/sh -&gt; bash<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>再运行sh命令即可</li>
 <li>脚本完成后，会启动以下 5 个服务，使用</li>
 </ul>
-<p>代码语言：javascript<br>复制</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">jps<br></code></pre></td></tr></table></figure>
 <p>命令查看服务是否启动( jps 为 JDK 自带)</p>
 <ul>
 <li>如果显示中包含：</li>
 </ul>
-<p>代码语言：javascript<br>复制</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-title class_">MasterServer</span>         ----- master服务<br>    <span class="hljs-title class_">WorkerServer</span>         ----- worker服务<br>    <span class="hljs-title class_">LoggerServer</span>         ----- logger服务<br>    <span class="hljs-title class_">ApiApplicationServer</span> ----- api服务<br>    <span class="hljs-title class_">AlertServer</span>          ----- alert服务<br></code></pre></td></tr></table></figure>
-<p>如果以上服务都正常启动，说明自动部署成功<br>部署成功后，可以进行日志查看，日志统一存放于 logs 文件夹内<br>&#x2F;usr&#x2F;dolphinscheduler&#x2F;logs<br>代码语言：javascript<br>复制</p>
+<p>如果以上服务都正常启动，说明自动部署成功</p>
+<p>部署成功后，可以进行日志查看，日志统一存放于 logs 文件夹内</p>
+<p>&#x2F;usr&#x2F;dolphinscheduler&#x2F;logs</p>
+<p>代码语言：javascript</p>
+<p>复制</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript">logs/<br>    ├── dolphinscheduler-alert-server.<span class="hljs-property">log</span><br>    ├── dolphinscheduler-master-server.<span class="hljs-property">log</span><br>    |—— dolphinscheduler-worker-server.<span class="hljs-property">log</span><br>    |—— dolphinscheduler-api-server.<span class="hljs-property">log</span><br>    |—— dolphinscheduler-logger-server.<span class="hljs-property">log</span><br></code></pre></td></tr></table></figure>
-<h4 id="7-登录系统"><a href="#7-登录系统" class="headerlink" title="7.登录系统"></a><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=http://mp.weixin.qq.com/s?__biz=MzI0NjU2NDkzMQ==&mid=2247494550&idx=1&sn=abdf05ddc46325b37400e66b0a5fa91a&chksm=e9bffabadec873ac8725efe1fda1e5f13fc304bd29c5985df4976266f86e747c47d09447ad88&scene=21%23wechat_redirect&source=article&objectId=1909521">7.登录系统</a></h4><p>访问前端页面地址，接口 ip (自行修改) <a target="_blank" rel="noopener" href="http://192.168.xx.xx:12345/dolphinscheduler">http://192.168.xx.xx:12345/dolphinscheduler</a><br><img src="https://cdn.nlark.com/yuque/0/2024/png/29792214/1715239284972-fdf83fd6-3f72-426e-8fa9-69f6ec2adc72.png#clientId=u846a0b5a-ddc0-4&from=paste&id=u501cbb43&originalType=url&ratio=1&rotation=0&showTitle=false&size=44901&status=done&style=none&taskId=ua90efdeb-d37b-4499-8f86-2cb7ab29749&title=" srcset="/fzd.github.io/img/loading.gif" lazyload alt="image.jpg"><br>部署完成，成功进入界面。<br>推荐参考文档：<br>官网网址：<br><a target="_blank" rel="noopener" href="https://dolphinscheduler.apache.org/zh-cn/">https://dolphinscheduler.apache.org/zh-cn/</a><br>官网使用教程：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1d64y1s7eZ">https://www.bilibili.com/video/BV1d64y1s7eZ</a><br>你可以在这里参考原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_50740678/article/details/120615253">https://blog.csdn.net/qq_50740678/article/details/120615253</a><br>本文参与 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/support-plan">腾讯云自媒体分享计划</a>，分享自微信公众号。<br>原始发表：2021-11-25，如有侵权请联系 <a href="mailto:cloudcommunity@tencent.com">cloudcommunity@tencent.com</a> 删除<br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10178">bash</a><br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10316">bash 指令</a><br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10164">java</a><br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10308">linux</a><br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10245">云数据库 SQL Server</a><br>本文分享自 大数据真好玩 微信公众号，前往查看<br>如有侵权，请联系 <a href="mailto:cloudcommunity@tencent.com">cloudcommunity@tencent.com</a> 删除。<br>本文参与 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/support-plan">腾讯云自媒体分享计划</a>  ，欢迎热爱写作的你一起参与！<br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10178">bash</a><br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10316">bash 指令</a><br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10164">java</a><br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10308">linux</a><br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10245">云数据库 SQL Server</a></p>
+<p><a name="f5mGV"></a></p>
+<h4 id="7-登录系统"><a href="#7-登录系统" class="headerlink" title="7.登录系统"></a><a href="https://cloud.tencent.com/developer/tools/blog-entry?target=http://mp.weixin.qq.com/s?__biz=MzI0NjU2NDkzMQ==&mid=2247494550&idx=1&sn=abdf05ddc46325b37400e66b0a5fa91a&chksm=e9bffabadec873ac8725efe1fda1e5f13fc304bd29c5985df4976266f86e747c47d09447ad88&scene=21%23wechat_redirect&source=article&objectId=1909521">7.登录系统</a></h4><p>访问前端页面地址，接口 ip (自行修改) <a target="_blank" rel="noopener" href="http://192.168.xx.xx:12345/dolphinscheduler">http://192.168.xx.xx:12345/dolphinscheduler</a></p>
+<p><img src="/fzd.github.io/images/7.png" srcset="/fzd.github.io/img/loading.gif" lazyload alt="image.jpg"></p>
+<p>部署完成，成功进入界面。</p>
+<p>推荐参考文档：</p>
+<p>官网网址：</p>
+<p><a target="_blank" rel="noopener" href="https://dolphinscheduler.apache.org/zh-cn/">https://dolphinscheduler.apache.org/zh-cn/</a></p>
+<p>官网使用教程：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1d64y1s7eZ">https://www.bilibili.com/video/BV1d64y1s7eZ</a></p>
+<p>你可以在这里参考原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_50740678/article/details/120615253">https://blog.csdn.net/qq_50740678/article/details/120615253</a></p>
+<p>本文参与 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/support-plan">腾讯云自媒体分享计划</a>，分享自微信公众号。</p>
+<p>原始发表：2021-11-25，如有侵权请联系 <a href="mailto:cloudcommunity@tencent.com">cloudcommunity@tencent.com</a> 删除</p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10178">bash</a></p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10316">bash 指令</a></p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10164">java</a></p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10308">linux</a></p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10245">云数据库 SQL Server</a></p>
+<p>本文分享自 大数据真好玩 微信公众号，前往查看</p>
+<p>如有侵权，请联系 <a href="mailto:cloudcommunity@tencent.com">cloudcommunity@tencent.com</a> 删除。</p>
+<p>本文参与 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/support-plan">腾讯云自媒体分享计划</a>  ，欢迎热爱写作的你一起参与！</p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10178">bash</a></p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10316">bash 指令</a></p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10164">java</a></p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10308">linux</a></p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/tag/10245">云数据库 SQL Server</a></p>
 <blockquote>
 <p>来自: <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1909521">保姆级超详细教程：DolphinScheduler单机(本地)部署及软件运行测试-腾讯云开发者社区-腾讯云</a></p>
 </blockquote>
@@ -442,7 +574,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>DolphinScheduler单机(本地)部署</div>
+      <div></div>
       <div>https://ximiedeyanhuo.github.io/fzd.github.io/2024/05/11/保姆级超详细教程：DolphinScheduler单机(本地)部署及软件运行测试-腾讯云开发者社区-腾讯云/</div>
     </div>
     <div class="license-meta">
