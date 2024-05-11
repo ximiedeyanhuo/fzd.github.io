@@ -1,180 +1,278 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>荒岛 | 荒岛</title><meta name="author" content="拾光"><meta name="copyright" content="拾光"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="pureA brand new default theme for [Hexo].  Preview | English documentation | iconfont 特色 多语言 第三方评论框（友言、来必力、gitment、gitalk） 可展示个人豆瓣书单 可展示个人github托管项目 可设置支付宝、微信打赏  页面展示首页 | 归档 | 分类 | 标签 | 项目 | 书单 | 友链 |">
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/fzd.github.io/img/fluid.png">
+  <link rel="icon" href="/fzd.github.io/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="拾光">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="pureA brand new default theme for [Hexo].  Preview | English documentation | iconfont 特色 多语言 第三方评论框（友言、来必力、gitment、gitalk） 可展示个人豆瓣书单 可展示个人github托管项目 可设置支付宝、微信打赏  页面展示首页 | 归档 | 分类 | 标签 | 项目 | 书单 | 友链 |">
 <meta property="og:type" content="article">
 <meta property="og:title" content="荒岛">
 <meta property="og:url" content="https://ximiedeyanhuo.github.io/fzd.github.io/2024/05/11/%E8%B0%81%E7%9A%84%E5%95%8A/index.html">
 <meta property="og:site_name" content="荒岛">
 <meta property="og:description" content="pureA brand new default theme for [Hexo].  Preview | English documentation | iconfont 特色 多语言 第三方评论框（友言、来必力、gitment、gitalk） 可展示个人豆瓣书单 可展示个人github托管项目 可设置支付宝、微信打赏  页面展示首页 | 归档 | 分类 | 标签 | 项目 | 书单 | 友链 |">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
-<meta property="article:published_time" content="2024-05-11T01:20:38.328Z">
-<meta property="article:modified_time" content="2024-05-11T01:20:38.328Z">
+<meta property="article:published_time" content="2024-05-11T02:16:00.107Z">
+<meta property="article:modified_time" content="2024-05-11T02:16:00.107Z">
 <meta property="article:author" content="拾光">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/fzd.github.io/img/favicon.png"><link rel="canonical" href="https://ximiedeyanhuo.github.io/fzd.github.io/2024/05/11/%E8%B0%81%E7%9A%84%E5%95%8A/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/fzd.github.io/css/index.css?v=4.14.0-b3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>(()=>{
-      const saveToLocal = {
-        set: (key, value, ttl) => {
-          if (ttl === 0) return
-          const now = Date.now()
-          const expiry = now + ttl * 86400000
-          const item = {
-            value,
-            expiry
-          }
-          localStorage.setItem(key, JSON.stringify(item))
-        },
-      
-        get: key => {
-          const itemStr = localStorage.getItem(key)
-      
-          if (!itemStr) {
-            return undefined
-          }
-          const item = JSON.parse(itemStr)
-          const now = Date.now()
-      
-          if (now > item.expiry) {
-            localStorage.removeItem(key)
-            return undefined
-          }
-          return item.value
-        }
-      }
-      
-      window.btf = {
-        saveToLocal: saveToLocal,
-        getScript: (url, attr = {}) => new Promise((resolve, reject) => {
-          const script = document.createElement('script')
-          script.src = url
-          script.async = true
-          script.onerror = reject
-          script.onload = script.onreadystatechange = function() {
-            const loadState = this.readyState
-            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-            script.onload = script.onreadystatechange = null
-            resolve()
-          }
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>荒岛</title>
 
-          Object.keys(attr).forEach(key => {
-            script.setAttribute(key, attr[key])
-          })
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
-          document.head.appendChild(script)
-        }),
 
-        getCSS: (url, id = false) => new Promise((resolve, reject) => {
-          const link = document.createElement('link')
-          link.rel = 'stylesheet'
-          link.href = url
-          if (id) link.id = id
-          link.onerror = reject
-          link.onload = link.onreadystatechange = function() {
-            const loadState = this.readyState
-            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-            link.onload = link.onreadystatechange = null
-            resolve()
-          }
-          document.head.appendChild(link)
-        }),
 
-        addGlobalFn: (key, fn, name = false, parent = window) => {
-          const pjaxEnable = false
-          if (!pjaxEnable && key.startsWith('pjax')) return
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
 
-          const globalFn = parent.globalFn || {}
-          const keyObj = globalFn[key] || {}
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/fzd.github.io/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/fzd.github.io/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/fzd.github.io/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"ximiedeyanhuo.github.io","root":"/fzd.github.io/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/fzd.github.io/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/fzd.github.io/js/utils.js" ></script>
+  <script  src="/fzd.github.io/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
     
-          if (name && keyObj[name]) return
-    
-          name = name || Object.keys(keyObj).length
-          keyObj[name] = fn
-          globalFn[key] = keyObj
-          parent.globalFn = globalFn
-        }
-      }
-    
-      const activateDarkMode = () => {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      const activateLightMode = () => {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
 
-      btf.activateDarkMode = activateDarkMode
-      btf.activateLightMode = activateLightMode
-      
-      const t = saveToLocal.get('theme')
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/fzd.github.io/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/fzd.github.io/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/fzd.github.io/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/fzd.github.io/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/fzd.github.io/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/fzd.github.io/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/fzd.github.io/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text=""></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
     
-        if (t === 'dark') activateDarkMode()
-        else if (t === 'light') activateLightMode()
-      
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
     
-      const detectApple = () => {
-        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-          document.documentElement.classList.add('apple')
-        }
-      }
-      detectApple()
-    })()</script><script>const GLOBAL_CONFIG = {
-  root: '/fzd.github.io/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":true,"highlightMacStyle":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  dateSuffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  infinitegrid: {
-    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
-    buttonText: '加载更多'
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '荒岛',
-  isPost: true,
-  isHome: false,
-  isHighlightShrink: false,
-  isToc: true,
-  postUpdate: '2024-05-11 09:20:38'
-}</script><meta name="generator" content="Hexo 7.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/fzd.github.io/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/fzd.github.io/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/fzd.github.io/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/fzd.github.io/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/fzd.github.io/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/fzd.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/fzd.github.io/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/fzd.github.io/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/fzd.github.io/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/fzd.github.io/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/fzd.github.io/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/fzd.github.io/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/fzd.github.io/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/fzd.github.io/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/fzd.github.io/" title="荒岛"><span class="site-name">荒岛</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/fzd.github.io/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/fzd.github.io/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/fzd.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/fzd.github.io/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/fzd.github.io/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/fzd.github.io/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/fzd.github.io/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/fzd.github.io/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/fzd.github.io/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/fzd.github.io/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/fzd.github.io/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-11T01:20:38.328Z" title="发表于 2024-05-11 09:20:38">2024-05-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-11T01:20:38.328Z" title="更新于 2024-05-11 09:20:38">2024-05-11</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="pure"><a href="#pure" class="headerlink" title="pure"></a>pure</h1><p>A brand new default theme for [<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>].  <a target="_blank" rel="noopener" href="http://cofess.github.io/">Preview</a> | <a href="README.md">English documentation</a> | <a target="_blank" rel="noopener" href="http://blog.cofess.com/hexo-theme-pure/iconfont/demo_fontclass.html">iconfont</a></p>
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-05-11 10:16" pubdate>
+          2024年5月11日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.6k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          14 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header"></h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="pure"><a href="#pure" class="headerlink" title="pure"></a>pure</h1><p>A brand new default theme for [<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>].  <a target="_blank" rel="noopener" href="http://cofess.github.io/">Preview</a> | <a href="README.md">English documentation</a> | <a target="_blank" rel="noopener" href="http://blog.cofess.com/hexo-theme-pure/iconfont/demo_fontclass.html">iconfont</a></p>
 <h2 id="特色"><a href="#特色" class="headerlink" title="特色"></a>特色</h2><ul>
 <li>多语言</li>
 <li>第三方评论框（友言、来必力、gitment、gitalk）</li>
@@ -184,88 +282,88 @@
 </ul>
 <h2 id="页面展示"><a href="#页面展示" class="headerlink" title="页面展示"></a>页面展示</h2><p><a target="_blank" rel="noopener" href="http://cofess.github.io/">首页</a> | <a target="_blank" rel="noopener" href="http://cofess.github.io/archives/">归档</a> | <a target="_blank" rel="noopener" href="http://cofess.github.io/categories/">分类</a> | <a target="_blank" rel="noopener" href="http://cofess.github.io/tags/">标签</a> | <a target="_blank" rel="noopener" href="http://cofess.github.io/repository/">项目</a> | <a target="_blank" rel="noopener" href="http://cofess.github.io/books/">书单</a> | <a target="_blank" rel="noopener" href="http://cofess.github.io/links/">友链</a> | <a target="_blank" rel="noopener" href="http://cofess.github.io/about/">关于</a></p>
 <h2 id="配置说明"><a href="#配置说明" class="headerlink" title="配置说明"></a>配置说明</h2><p>在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。为了描述方便，在以下说明中，将前者称为站点配置文件， 后者称为主题配置文件</p>
-<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/cofess/hexo-theme-pure.git themes/pure</span><br></pre></td></tr></table></figure>
-<h2 id="更新主题"><a href="#更新主题" class="headerlink" title="更新主题"></a>更新主题</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd themes/pure</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/cofess/hexo-theme-pure.git themes/pure<br></code></pre></td></tr></table></figure>
+<h2 id="更新主题"><a href="#更新主题" class="headerlink" title="更新主题"></a>更新主题</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> themes/pure<br>git pull<br></code></pre></td></tr></table></figure>
 <h2 id="启用pure主题"><a href="#启用pure主题" class="headerlink" title="启用pure主题"></a>启用pure主题</h2><p>打开站点配置文件，找到theme字段，将其值更改为 pure</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: pure</span><br></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">theme:</span> pure<br></code></pre></td></tr></table></figure>
 
 <p>到此，主题安装完成。然后启动Hexo服务验证主题是否正确启用。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo s</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><h3 id="hexo-wordcount"><a href="#hexo-wordcount" class="headerlink" title="hexo-wordcount"></a><a target="_blank" rel="noopener" href="https://github.com/willin/hexo-wordcount">hexo-wordcount</a></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
-<h3 id="hexo-generator-json-content"><a href="#hexo-generator-json-content" class="headerlink" title="hexo-generator-json-content"></a><a target="_blank" rel="noopener" href="https://github.com/alexbruno/hexo-generator-json-content">hexo-generator-json-content</a></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-json-content --save</span><br></pre></td></tr></table></figure>
-<h3 id="hexo-generator-feed"><a href="#hexo-generator-feed" class="headerlink" title="hexo-generator-feed"></a><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
-<h3 id="hexo-generator-sitemap"><a href="#hexo-generator-sitemap" class="headerlink" title="hexo-generator-sitemap"></a><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-sitemap">hexo-generator-sitemap</a></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
-<h3 id="hexo-generator-baidu-sitemap"><a href="#hexo-generator-baidu-sitemap" class="headerlink" title="hexo-generator-baidu-sitemap"></a><a target="_blank" rel="noopener" href="https://github.com/coneycode/hexo-generator-baidu-sitemap">hexo-generator-baidu-sitemap</a></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><h3 id="hexo-wordcount"><a href="#hexo-wordcount" class="headerlink" title="hexo-wordcount"></a><a target="_blank" rel="noopener" href="https://github.com/willin/hexo-wordcount">hexo-wordcount</a></h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">npm install hexo-wordcount <span class="hljs-comment">--save</span><br></code></pre></td></tr></table></figure>
+<h3 id="hexo-generator-json-content"><a href="#hexo-generator-json-content" class="headerlink" title="hexo-generator-json-content"></a><a target="_blank" rel="noopener" href="https://github.com/alexbruno/hexo-generator-json-content">hexo-generator-json-content</a></h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">npm install hexo-generator-json-<span class="hljs-attribute">content</span> <span class="hljs-attr">--save</span><br></code></pre></td></tr></table></figure>
+<h3 id="hexo-generator-feed"><a href="#hexo-generator-feed" class="headerlink" title="hexo-generator-feed"></a><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a></h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">npm install hexo-generator-feed <span class="hljs-comment">--save</span><br></code></pre></td></tr></table></figure>
+<h3 id="hexo-generator-sitemap"><a href="#hexo-generator-sitemap" class="headerlink" title="hexo-generator-sitemap"></a><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-sitemap">hexo-generator-sitemap</a></h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">npm install hexo-generator-sitemap <span class="hljs-comment">--save</span><br></code></pre></td></tr></table></figure>
+<h3 id="hexo-generator-baidu-sitemap"><a href="#hexo-generator-baidu-sitemap" class="headerlink" title="hexo-generator-baidu-sitemap"></a><a target="_blank" rel="noopener" href="https://github.com/coneycode/hexo-generator-baidu-sitemap">hexo-generator-baidu-sitemap</a></h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">npm <span class="hljs-keyword">install </span>hexo-generator-<span class="hljs-keyword">baidu-sitemap </span>--save<br></code></pre></td></tr></table></figure>
 <h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><h3 id="设置语言"><a href="#设置语言" class="headerlink" title="设置语言"></a>设置语言</h3><p>打开站点配置文件, 将 language 设置成你所需要的语言。建议明确设置你所需要的语言,可选值对应themes\pure\languages目录下语言文件，简体中文配置如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">language: zh-CN</span><br></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">language:</span> <span class="hljs-built_in">zh</span>-CN<br></code></pre></td></tr></table></figure>
 
 <h3 id="主题颜色"><a href="#主题颜色" class="headerlink" title="主题颜色"></a>主题颜色</h3><p>定制了五套颜色，默认白，黑:theme-black，蓝:theme-blue，绿:theme-green，紫:theme-purple</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># config</span><br><span class="line">config:</span><br><span class="line">  skin: # 主题颜色 theme-black theme-blue theme-green theme-purple</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># config</span><br><span class="hljs-attr">config:</span><br>  <span class="hljs-attr">skin:</span> <span class="hljs-comment"># 主题颜色 theme-black theme-blue theme-green theme-purple</span><br></code></pre></td></tr></table></figure>
 
-<h3 id="导航菜单"><a href="#导航菜单" class="headerlink" title="导航菜单"></a>导航菜单</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 导航菜单</span><br><span class="line">menu:</span><br><span class="line">  Home: . </span><br><span class="line">  Archives: archives # 归档</span><br><span class="line">  Categories: categories # 分类</span><br><span class="line">  Tags: tags # 标签</span><br><span class="line">  Repository: repository # github repositories</span><br><span class="line">  Books: books     # 书单</span><br><span class="line">  Links: links # 友链</span><br><span class="line">  About: about # 关于</span><br><span class="line"></span><br><span class="line"># 导航菜单图标（font awesome）</span><br><span class="line">menu_icons:</span><br><span class="line">  enable: true # 是否启用菜单图标</span><br><span class="line">  home: icon-home-fill</span><br><span class="line">  archives: icon-archives-fill</span><br><span class="line">  categories: icon-folder</span><br><span class="line">  tags: icon-tags</span><br><span class="line">  repository: icon-project</span><br><span class="line">  books: icon-book-fill</span><br><span class="line">  links: icon-friendship</span><br><span class="line">  about: icon-cup-fill</span><br></pre></td></tr></table></figure>
+<h3 id="导航菜单"><a href="#导航菜单" class="headerlink" title="导航菜单"></a>导航菜单</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># 导航菜单</span><br><span class="hljs-attr">menu:</span><br>  <span class="hljs-attr">Home:</span> <span class="hljs-string">.</span> <br>  <span class="hljs-attr">Archives:</span> <span class="hljs-string">archives</span> <span class="hljs-comment"># 归档</span><br>  <span class="hljs-attr">Categories:</span> <span class="hljs-string">categories</span> <span class="hljs-comment"># 分类</span><br>  <span class="hljs-attr">Tags:</span> <span class="hljs-string">tags</span> <span class="hljs-comment"># 标签</span><br>  <span class="hljs-attr">Repository:</span> <span class="hljs-string">repository</span> <span class="hljs-comment"># github repositories</span><br>  <span class="hljs-attr">Books:</span> <span class="hljs-string">books</span>     <span class="hljs-comment"># 书单</span><br>  <span class="hljs-attr">Links:</span> <span class="hljs-string">links</span> <span class="hljs-comment"># 友链</span><br>  <span class="hljs-attr">About:</span> <span class="hljs-string">about</span> <span class="hljs-comment"># 关于</span><br><br><span class="hljs-comment"># 导航菜单图标（font awesome）</span><br><span class="hljs-attr">menu_icons:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span> <span class="hljs-comment"># 是否启用菜单图标</span><br>  <span class="hljs-attr">home:</span> <span class="hljs-string">icon-home-fill</span><br>  <span class="hljs-attr">archives:</span> <span class="hljs-string">icon-archives-fill</span><br>  <span class="hljs-attr">categories:</span> <span class="hljs-string">icon-folder</span><br>  <span class="hljs-attr">tags:</span> <span class="hljs-string">icon-tags</span><br>  <span class="hljs-attr">repository:</span> <span class="hljs-string">icon-project</span><br>  <span class="hljs-attr">books:</span> <span class="hljs-string">icon-book-fill</span><br>  <span class="hljs-attr">links:</span> <span class="hljs-string">icon-friendship</span><br>  <span class="hljs-attr">about:</span> <span class="hljs-string">icon-cup-fill</span><br></code></pre></td></tr></table></figure>
 
-<h3 id="设置个人信息"><a href="#设置个人信息" class="headerlink" title="设置个人信息"></a>设置个人信息</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">头像在themes\pure\source\images 目录下替换图片即可，捐献的二维码同理。</span><br><span class="line"></span><br><span class="line">个人信息大部分都在 主题配置文件 中设置</span><br></pre></td></tr></table></figure>
+<h3 id="设置个人信息"><a href="#设置个人信息" class="headerlink" title="设置个人信息"></a>设置个人信息</h3><figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">头像在themes\pure\source\images 目录下替换图片即可，捐献的二维码同理。<br><br>个人信息大部分都在 主题配置文件 中设置<br></code></pre></td></tr></table></figure>
 
 <h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p>主题内置三种站内搜索方式：insight、swiftype、baidu</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Search</span><br><span class="line">search:</span><br><span class="line">  insight: true # you need to install `hexo-generator-json-content` before using Insight Search</span><br><span class="line">  swiftype: # enter swiftype install key here</span><br><span class="line">  baidu: false # you need to disable other search engines to use Baidu search</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Search</span><br><span class="hljs-attr">search:</span><br>  <span class="hljs-attr">insight:</span> <span class="hljs-literal">true</span> <span class="hljs-comment"># you need to install `hexo-generator-json-content` before using Insight Search</span><br>  <span class="hljs-attr">swiftype:</span> <span class="hljs-comment"># enter swiftype install key here</span><br>  <span class="hljs-attr">baidu:</span> <span class="hljs-literal">false</span> <span class="hljs-comment"># you need to disable other search engines to use Baidu search</span><br></code></pre></td></tr></table></figure>
 
 <h3 id="分享"><a href="#分享" class="headerlink" title="分享"></a>分享</h3><p>支持<code>weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Share</span><br><span class="line"># weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin</span><br><span class="line">share:</span><br><span class="line">  enable: true  # 是否启用分享</span><br><span class="line">  sites: weibo,qq,wechat,facebook,twitter  # PC端显示的分享图标</span><br><span class="line">  mobile_sites: weibo,qq,qzone  # 移动端显示的分享图标</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Share</span><br><span class="hljs-comment"># weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin</span><br><span class="hljs-attr">share:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span>  <span class="hljs-comment"># 是否启用分享</span><br>  <span class="hljs-attr">sites:</span> <span class="hljs-string">weibo,qq,wechat,facebook,twitter</span>  <span class="hljs-comment"># PC端显示的分享图标</span><br>  <span class="hljs-attr">mobile_sites:</span> <span class="hljs-string">weibo,qq,qzone</span>  <span class="hljs-comment"># 移动端显示的分享图标</span><br></code></pre></td></tr></table></figure>
 
 <h3 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h3><p>主题集成了<a target="_blank" rel="noopener" href="https://disqus.com/">disqus</a>、<a target="_blank" rel="noopener" href="http://www.uyan.cc/">友言</a>、<a target="_blank" rel="noopener" href="https://livere.com/">来必力</a>、<a target="_blank" rel="noopener" href="https://github.com/imsun/gitment">gitment</a>、<a target="_blank" rel="noopener" href="https://github.com/gitalk/gitalk">gitalk</a>评论系统，选择其中一种即可</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># Comment</span><br><span class="line"># Gitment</span><br><span class="line"># Introduction: https://imsun.net/posts/gitment-introduction/</span><br><span class="line">comment:</span><br><span class="line">  type: livere # 启用哪种评论系统</span><br><span class="line">  disqus:  # enter disqus shortname here</span><br><span class="line">  youyan: </span><br><span class="line">    uid: *** # enter youyan uid </span><br><span class="line">  livere:</span><br><span class="line">    uid: *** # enter livere uid</span><br><span class="line">  gitment:</span><br><span class="line">    githubID: username</span><br><span class="line">    repo: username.github.io</span><br><span class="line">    ClientID: ***</span><br><span class="line">    ClientSecret: ***</span><br><span class="line">    lazy: false</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Comment</span><br><span class="hljs-comment"># Gitment</span><br><span class="hljs-comment"># Introduction: https://imsun.net/posts/gitment-introduction/</span><br><span class="hljs-attr">comment:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">livere</span> <span class="hljs-comment"># 启用哪种评论系统</span><br>  <span class="hljs-attr">disqus:</span>  <span class="hljs-comment"># enter disqus shortname here</span><br>  <span class="hljs-attr">youyan:</span> <br>    <span class="hljs-attr">uid:</span> <span class="hljs-string">***</span> <span class="hljs-comment"># enter youyan uid </span><br>  <span class="hljs-attr">livere:</span><br>    <span class="hljs-attr">uid:</span> <span class="hljs-string">***</span> <span class="hljs-comment"># enter livere uid</span><br>  <span class="hljs-attr">gitment:</span><br>    <span class="hljs-attr">githubID:</span> <span class="hljs-string">username</span><br>    <span class="hljs-attr">repo:</span> <span class="hljs-string">username.github.io</span><br>    <span class="hljs-attr">ClientID:</span> <span class="hljs-string">***</span><br>    <span class="hljs-attr">ClientSecret:</span> <span class="hljs-string">***</span><br>    <span class="hljs-attr">lazy:</span> <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 
 <h3 id="文章浏览量统计"><a href="#文章浏览量统计" class="headerlink" title="文章浏览量统计"></a>文章浏览量统计</h3><p>主题内置了不蒜子和leancloud来统计文章浏览量，启用其中之一即可，注意leancloud需要到其官网申请APP ID 和APP Key。</p>
 <p>比如，启用不蒜子来统计文章浏览量，在主题配置文件中把busuanzi设置为true即可：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pv:</span><br><span class="line">  busuanzi:</span><br><span class="line">    enable: true  # 不蒜子统计</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">pv:</span><br>  <span class="hljs-attr">busuanzi:</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span>  <span class="hljs-comment"># 不蒜子统计</span><br></code></pre></td></tr></table></figure>
 
 <p>如果不需要第三方来统计浏览量，只需将相应设置改为false即可（设置为false后不会加载第三方JS脚本）</p>
 <h3 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h3><p>复制<code>theme/pure/_source/</code> 目录下<code>repository</code>文件夹到<code>blog path/source/</code> 目录下</p>
 <p>新版配置（支持 Github 和 Gitee）：</p>
 <p><em>新版配置将会覆盖旧版的 github 配置！</em></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Repository Info (This will override &#x27;github&#x27; option)</span><br><span class="line"># 项目仓库展示信息（将会覆盖 github 项）</span><br><span class="line">repository:</span><br><span class="line">  platform: github # 托管平台（github | gitee）</span><br><span class="line">  username: *** # 用户名</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Repository Info (This will override &#x27;github&#x27; option)</span><br><span class="hljs-comment"># 项目仓库展示信息（将会覆盖 github 项）</span><br><span class="hljs-attr">repository:</span><br>  <span class="hljs-attr">platform:</span> <span class="hljs-string">github</span> <span class="hljs-comment"># 托管平台（github | gitee）</span><br>  <span class="hljs-attr">username:</span> <span class="hljs-string">***</span> <span class="hljs-comment"># 用户名</span><br></code></pre></td></tr></table></figure>
 
 <p>旧版配置（仅支持 Github）：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Github</span><br><span class="line">github: </span><br><span class="line">  username: ***  # github username</span><br></pre></td></tr></table></figure>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-meta"># Github</span><br><span class="hljs-symbol">github:</span> <br><span class="hljs-symbol">  username:</span> ***  <span class="hljs-meta"># github username</span><br></code></pre></td></tr></table></figure>
 
 <h3 id="豆瓣书单"><a href="#豆瓣书单" class="headerlink" title="豆瓣书单"></a>豆瓣书单</h3><p>复制<code>theme/pure/_source/</code> 目录下<code>books</code>文件夹到<code>blog path/source/</code> 目录下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># douban 豆瓣书单</span><br><span class="line">douban:</span><br><span class="line">  user: *** # 豆瓣用户名</span><br><span class="line">  start: 0 # 从哪一条记录开始</span><br><span class="line">  count: 100 # 获取豆瓣书单数据条数</span><br></pre></td></tr></table></figure>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-meta"># douban 豆瓣书单</span><br><span class="hljs-symbol">douban:</span><br><span class="hljs-symbol">  user:</span> *** <span class="hljs-meta"># 豆瓣用户名</span><br><span class="hljs-symbol">  start:</span> <span class="hljs-number">0</span> <span class="hljs-meta"># 从哪一条记录开始</span><br><span class="hljs-symbol">  count:</span> <span class="hljs-number">100</span> <span class="hljs-meta"># 获取豆瓣书单数据条数</span><br></code></pre></td></tr></table></figure>
 
 <h3 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接"></a>友情链接</h3><p>复制<code>theme/pure/_source/</code> 目录下<code>links</code>文件夹到<code>blog path/source/</code> 目录下</p>
 <p>在 hexo 目录下的 source 文件夹内创建一个名为 _data（禁止改名）的文件夹。</p>
 <p>然后在文件内创建一个名为 links.yml 的文件,在其中添加相关数据即可。</p>
 <p>单个友情链接的格式为：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Name:</span><br><span class="line">    link: http://example.com</span><br><span class="line">    avatar: http://example.com/avatar.png</span><br><span class="line">    desc: &quot;这是一个描述&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">Name:</span><br><span class="hljs-symbol">    link:</span> http:<span class="hljs-comment">//example.com</span><br><span class="hljs-symbol">    avatar:</span> http:<span class="hljs-comment">//example.com/avatar.png</span><br><span class="hljs-symbol">    desc:</span> <span class="hljs-string">&quot;这是一个描述&quot;</span><br></code></pre></td></tr></table></figure>
 
 <p>添加多个友情链接，我们只需要根据上面的格式重复填写即可。</p>
 <p>. 将 Name 改为友情链接的名字，例如 Cofess。</p>
 <p>. <a target="_blank" rel="noopener" href="http://example.com/">http://example.com</a> 为友情链接的地址。</p>
 <p>. <a target="_blank" rel="noopener" href="http://example.com/avatar.png">http://example.com/avatar.png</a> 为友情链接的头像。</p>
 <p>. 这是一个描述 为友情链接描述。</p>
-<h3 id="文章索引目录"><a href="#文章索引目录" class="headerlink" title="文章索引目录"></a>文章索引目录</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: 文章标题</span><br><span class="line">categories:</span><br><span class="line">  - 文章分类</span><br><span class="line">tags:</span><br><span class="line">  - 文章标签</span><br><span class="line">toc: true # 是否启用内容索引</span><br></pre></td></tr></table></figure>
+<h3 id="文章索引目录"><a href="#文章索引目录" class="headerlink" title="文章索引目录"></a>文章索引目录</h3><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs subunit">title: 文章标题<br>categories:<br>  - 文章分类<br><span class="hljs-keyword">tags:</span><br>  - 文章标签<br>toc: true # 是否启用内容索引<br></code></pre></td></tr></table></figure>
 
 <h3 id="sidebar侧边栏"><a href="#sidebar侧边栏" class="headerlink" title="sidebar侧边栏"></a>sidebar侧边栏</h3><p>文章侧边栏默认为开启状态，如果某篇文章不想开启侧边栏，在文章开头配置加入“sidebar: none”即可：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: 文章标题</span><br><span class="line">categories:</span><br><span class="line">  - 文章分类</span><br><span class="line">tags:</span><br><span class="line">  - 文章标签</span><br><span class="line">sidebar: none # 是否启用sidebar侧边栏，none：不启用</span><br></pre></td></tr></table></figure>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs subunit">title: 文章标题<br>categories:<br>  - 文章分类<br><span class="hljs-keyword">tags:</span><br>  - 文章标签<br>sidebar: none # 是否启用sidebar侧边栏，none：不启用<br></code></pre></td></tr></table></figure>
 
 <h2 id="博客优化"><a href="#博客优化" class="headerlink" title="博客优化"></a>博客优化</h2><h3 id="hexo-neat"><a href="#hexo-neat" class="headerlink" title="hexo-neat"></a><a target="_blank" rel="noopener" href="https://github.com/rozbo/hexo-neat">hexo-neat</a></h3><blockquote>
 <p>auto Minify html、js、css and make it neat</p>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-neat --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">npm install hexo-neat <span class="hljs-comment">--save</span><br></code></pre></td></tr></table></figure>
 
 <p>在博客配置文件<code>_config.yml</code>中添加</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># hexo-neat</span><br><span class="line">neat_enable: true</span><br><span class="line">neat_html:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:  </span><br><span class="line">neat_css:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:</span><br><span class="line">    - &#x27;*.min.css&#x27;</span><br><span class="line">neat_js:</span><br><span class="line">  enable: true</span><br><span class="line">  mangle: true</span><br><span class="line">  output:</span><br><span class="line">  compress:</span><br><span class="line">  exclude:</span><br><span class="line">    - &#x27;*.min.js&#x27; </span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># hexo-neat</span><br><span class="hljs-attr">neat_enable:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">neat_html:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">exclude:</span>  <br><span class="hljs-attr">neat_css:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">exclude:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;*.min.css&#x27;</span><br><span class="hljs-attr">neat_js:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">mangle:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">output:</span><br>  <span class="hljs-attr">compress:</span><br>  <span class="hljs-attr">exclude:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;*.min.js&#x27;</span> <br></code></pre></td></tr></table></figure>
 
-<h3 id="hexo-baidu-url-submit"><a href="#hexo-baidu-url-submit" class="headerlink" title="hexo-baidu-url-submit"></a><a target="_blank" rel="noopener" href="https://github.com/huiwang/hexo-baidu-url-submit">hexo-baidu-url-submit</a></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-baidu-url-submit --save</span><br></pre></td></tr></table></figure>
+<h3 id="hexo-baidu-url-submit"><a href="#hexo-baidu-url-submit" class="headerlink" title="hexo-baidu-url-submit"></a><a target="_blank" rel="noopener" href="https://github.com/huiwang/hexo-baidu-url-submit">hexo-baidu-url-submit</a></h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">npm <span class="hljs-keyword">install </span>hexo-<span class="hljs-keyword">baidu-url-submit </span>--save<br></code></pre></td></tr></table></figure>
 
 <h3 id="hexo-translate-title"><a href="#hexo-translate-title" class="headerlink" title="hexo-translate-title"></a><a target="_blank" rel="noopener" href="https://github.com/cometlj/hexo-translate-title">hexo-translate-title</a></h3><blockquote>
 <p>使用Google翻译，百度翻译和有道翻译将Hexo中的汉字标题转成英文标题</p>
 </blockquote>
 <p>安装</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-translate-title --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs maxima">npm install hexo-<span class="hljs-built_in">translate</span>-<span class="hljs-built_in">title</span> --<span class="hljs-built_in">save</span><br></code></pre></td></tr></table></figure>
 
 <p>在博客配置文件<code>_config.yml</code>中添加</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">translate_title:</span></span><br><span class="line">  <span class="attr">translate_way:</span> <span class="string">google</span>    <span class="comment">#google | baidu | youdao</span></span><br><span class="line">  <span class="attr">youdao_api_key:</span> <span class="string">XXX</span></span><br><span class="line">  <span class="attr">youdao_keyfrom:</span> <span class="string">XXX</span></span><br><span class="line">  <span class="attr">is_need_proxy:</span> <span class="literal">true</span>     <span class="comment">#true | false</span></span><br><span class="line">  <span class="attr">proxy_url:</span> <span class="string">http://localhost:8123</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">translate_title:</span><br>  <span class="hljs-attr">translate_way:</span> <span class="hljs-string">google</span>    <span class="hljs-comment">#google | baidu | youdao</span><br>  <span class="hljs-attr">youdao_api_key:</span> <span class="hljs-string">XXX</span><br>  <span class="hljs-attr">youdao_keyfrom:</span> <span class="hljs-string">XXX</span><br>  <span class="hljs-attr">is_need_proxy:</span> <span class="hljs-literal">true</span>     <span class="hljs-comment">#true | false</span><br>  <span class="hljs-attr">proxy_url:</span> <span class="hljs-string">http://localhost:8123</span><br></code></pre></td></tr></table></figure>
 
 <p><strong>注意</strong>：判断是否需要配置google本地代理，因为我在本地是开启时才能访问google翻译的，如果没有被墙，请将<code>_config.yml</code> 下的<code>is_need_proxy: true</code>改为false。如果设置为true,请设置本地代理地址</p>
 <h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><blockquote>
@@ -273,64 +371,344 @@
 </blockquote>
 <h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>解决方案有很多，可以网上搜下，为了节省大家的时间，这里只提供亲身测试过的方法。</p>
 <p>更换Hexo的markdown渲染引擎，<a target="_blank" rel="noopener" href="https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus">hexo-renderer-markdown-it-plus</a>引擎替换默认的渲染引擎<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-marked">hexo-renderer-marked</a>即可。</p>
-<h3 id="安装hexo-renderer-markdown-it-plus插件"><a href="#安装hexo-renderer-markdown-it-plus插件" class="headerlink" title="安装hexo-renderer-markdown-it-plus插件"></a>安装hexo-renderer-markdown-it-plus插件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-markdown-it-plus --save</span><br></pre></td></tr></table></figure>
+<h3 id="安装hexo-renderer-markdown-it-plus插件"><a href="#安装hexo-renderer-markdown-it-plus插件" class="headerlink" title="安装hexo-renderer-markdown-it-plus插件"></a>安装hexo-renderer-markdown-it-plus插件</h3><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs applescript">npm un hexo-renderer-marked <span class="hljs-comment">--save</span><br>npm i hexo-renderer-markdown-<span class="hljs-keyword">it</span>-plus <span class="hljs-comment">--save</span><br></code></pre></td></tr></table></figure>
 
 <h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>安装插件后，如果未正常渲染LaTeX数学公式，在博客配置文件<code>_config.yml</code>中添加</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">markdown_it_plus:</span><br><span class="line">  highlight: true</span><br><span class="line">  html: true</span><br><span class="line">  xhtmlOut: true</span><br><span class="line">  breaks: true</span><br><span class="line">  langPrefix:</span><br><span class="line">  linkify: true</span><br><span class="line">  typographer:</span><br><span class="line">  quotes: “”‘’</span><br><span class="line">  plugins:</span><br><span class="line">    - plugin:</span><br><span class="line">        name: markdown-it-katex</span><br><span class="line">        enable: true</span><br><span class="line">    - plugin:</span><br><span class="line">        name: markdown-it-mark</span><br><span class="line">        enable: false  </span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">markdown_it_plus:</span><br>  <span class="hljs-attr">highlight:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">html:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">xhtmlOut:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">breaks:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">langPrefix:</span><br>  <span class="hljs-attr">linkify:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">typographer:</span><br>  <span class="hljs-attr">quotes:</span> <span class="hljs-string">“”‘’</span><br>  <span class="hljs-attr">plugins:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">plugin:</span><br>        <span class="hljs-attr">name:</span> <span class="hljs-string">markdown-it-katex</span><br>        <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">plugin:</span><br>        <span class="hljs-attr">name:</span> <span class="hljs-string">markdown-it-mark</span><br>        <span class="hljs-attr">enable:</span> <span class="hljs-literal">false</span>  <br></code></pre></td></tr></table></figure>
 
-<h3 id="文章启用mathjax"><a href="#文章启用mathjax" class="headerlink" title="文章启用mathjax"></a>文章启用mathjax</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: Hello World</span><br><span class="line">mathjax: true</span><br></pre></td></tr></table></figure></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://ximiedeyanhuo.github.io/fzd.github.io">拾光</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://ximiedeyanhuo.github.io/fzd.github.io/2024/05/11/%E8%B0%81%E7%9A%84%E5%95%8A/">https://ximiedeyanhuo.github.io/fzd.github.io/2024/05/11/%E8%B0%81%E7%9A%84%E5%95%8A/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://ximiedeyanhuo.github.io/fzd.github.io" target="_blank">荒岛</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/fzd.github.io/2024/05/11/%E4%BF%9D%E5%A7%86%E7%BA%A7%E8%B6%85%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B%EF%BC%9ADolphinScheduler%E5%8D%95%E6%9C%BA(%E6%9C%AC%E5%9C%B0)%E9%83%A8%E7%BD%B2%E5%8F%8A%E8%BD%AF%E4%BB%B6%E8%BF%90%E8%A1%8C%E6%B5%8B%E8%AF%95-%E8%85%BE%E8%AE%AF%E4%BA%91%E5%BC%80%E5%8F%91%E8%80%85%E7%A4%BE%E5%8C%BA-%E8%85%BE%E8%AE%AF%E4%BA%91/" title="DolphinScheduler单机(本地)部署"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">DolphinScheduler单机(本地)部署</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/fzd.github.io/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">拾光</div><div class="author-info__description">归途也还挺帅</div></div><div class="card-info-data site-data is-center"><a href="/fzd.github.io/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/fzd.github.io/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/fzd.github.io/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#pure"><span class="toc-number">1.</span> <span class="toc-text">pure</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E8%89%B2"><span class="toc-number">1.1.</span> <span class="toc-text">特色</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E5%B1%95%E7%A4%BA"><span class="toc-number">1.2.</span> <span class="toc-text">页面展示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E"><span class="toc-number">1.3.</span> <span class="toc-text">配置说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98"><span class="toc-number">1.4.</span> <span class="toc-text">安装主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E4%B8%BB%E9%A2%98"><span class="toc-number">1.5.</span> <span class="toc-text">更新主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E7%94%A8pure%E4%B8%BB%E9%A2%98"><span class="toc-number">1.6.</span> <span class="toc-text">启用pure主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6"><span class="toc-number">1.7.</span> <span class="toc-text">安装插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo-wordcount"><span class="toc-number">1.7.1.</span> <span class="toc-text">hexo-wordcount</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo-generator-json-content"><span class="toc-number">1.7.2.</span> <span class="toc-text">hexo-generator-json-content</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo-generator-feed"><span class="toc-number">1.7.3.</span> <span class="toc-text">hexo-generator-feed</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo-generator-sitemap"><span class="toc-number">1.7.4.</span> <span class="toc-text">hexo-generator-sitemap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo-generator-baidu-sitemap"><span class="toc-number">1.7.5.</span> <span class="toc-text">hexo-generator-baidu-sitemap</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="toc-number">1.8.</span> <span class="toc-text">主题配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E8%AF%AD%E8%A8%80"><span class="toc-number">1.8.1.</span> <span class="toc-text">设置语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E9%A2%9C%E8%89%B2"><span class="toc-number">1.8.2.</span> <span class="toc-text">主题颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E8%88%AA%E8%8F%9C%E5%8D%95"><span class="toc-number">1.8.3.</span> <span class="toc-text">导航菜单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF"><span class="toc-number">1.8.4.</span> <span class="toc-text">设置个人信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2"><span class="toc-number">1.8.5.</span> <span class="toc-text">搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E4%BA%AB"><span class="toc-number">1.8.6.</span> <span class="toc-text">分享</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%84%E8%AE%BA"><span class="toc-number">1.8.7.</span> <span class="toc-text">评论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E6%B5%8F%E8%A7%88%E9%87%8F%E7%BB%9F%E8%AE%A1"><span class="toc-number">1.8.8.</span> <span class="toc-text">文章浏览量统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.8.9.</span> <span class="toc-text">项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B1%86%E7%93%A3%E4%B9%A6%E5%8D%95"><span class="toc-number">1.8.10.</span> <span class="toc-text">豆瓣书单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5"><span class="toc-number">1.8.11.</span> <span class="toc-text">友情链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E7%B4%A2%E5%BC%95%E7%9B%AE%E5%BD%95"><span class="toc-number">1.8.12.</span> <span class="toc-text">文章索引目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sidebar%E4%BE%A7%E8%BE%B9%E6%A0%8F"><span class="toc-number">1.8.13.</span> <span class="toc-text">sidebar侧边栏</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96"><span class="toc-number">1.9.</span> <span class="toc-text">博客优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo-neat"><span class="toc-number">1.9.1.</span> <span class="toc-text">hexo-neat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo-baidu-url-submit"><span class="toc-number">1.9.2.</span> <span class="toc-text">hexo-baidu-url-submit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo-translate-title"><span class="toc-number">1.9.3.</span> <span class="toc-text">hexo-translate-title</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F"><span class="toc-number">1.10.</span> <span class="toc-text">数学公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">1.10.1.</span> <span class="toc-text">解决方案</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85hexo-renderer-markdown-it-plus%E6%8F%92%E4%BB%B6"><span class="toc-number">1.10.2.</span> <span class="toc-text">安装hexo-renderer-markdown-it-plus插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">1.10.3.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%90%AF%E7%94%A8mathjax"><span class="toc-number">1.10.4.</span> <span class="toc-text">文章启用mathjax</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/fzd.github.io/2024/05/11/hello-world/" title="Hello World">Hello World</a><time datetime="2024-05-11T01:20:38.328Z" title="发表于 2024-05-11 09:20:38">2024-05-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/fzd.github.io/2024/05/11/%E4%BF%9D%E5%A7%86%E7%BA%A7%E8%B6%85%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B%EF%BC%9ADolphinScheduler%E5%8D%95%E6%9C%BA(%E6%9C%AC%E5%9C%B0)%E9%83%A8%E7%BD%B2%E5%8F%8A%E8%BD%AF%E4%BB%B6%E8%BF%90%E8%A1%8C%E6%B5%8B%E8%AF%95-%E8%85%BE%E8%AE%AF%E4%BA%91%E5%BC%80%E5%8F%91%E8%80%85%E7%A4%BE%E5%8C%BA-%E8%85%BE%E8%AE%AF%E4%BA%91/" title="DolphinScheduler单机(本地)部署">DolphinScheduler单机(本地)部署</a><time datetime="2024-05-11T01:20:38.328Z" title="发表于 2024-05-11 09:20:38">2024-05-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/fzd.github.io/2024/05/11/%E8%B0%81%E7%9A%84%E5%95%8A/" title="无题">无题</a><time datetime="2024-05-11T01:20:38.328Z" title="发表于 2024-05-11 09:20:38">2024-05-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 拾光</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/fzd.github.io/js/utils.js?v=4.14.0-b3"></script><script src="/fzd.github.io/js/main.js?v=4.14.0-b3"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.35/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
-  const runMermaid = (ele) => {
-    window.loadMermaid = true
-    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
-
-    Array.from(ele).forEach((item, index) => {
-      const mermaidSrc = item.firstElementChild
-      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
-      const mermaidID = 'mermaid-' + index
-      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
-
-      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
-
-      const renderV10 = () => {
-        renderFn.then(({svg}) => {
-          mermaidSrc.insertAdjacentHTML('afterend', svg)
-        })
-      }
-
-      const renderV9 = svg => {
-        mermaidSrc.insertAdjacentHTML('afterend', svg)
-      }
-
-      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
-    })
-  }
-
-  const codeToMermaid = () => {
-    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
-    if (codeMermaidEle.length === 0) return
-    
-    codeMermaidEle.forEach(ele => {
-      const newEle = document.createElement('div')
-      newEle.className = 'mermaid-wrap'
-      newEle.innerHTML = `<pre class="mermaid-src" hidden>${ele.textContent}</pre>`
-      ele.parentNode.replaceWith(newEle)
-    })
-  }
-
-  const loadMermaid = () => {
-    if (false) codeToMermaid()
-    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
-    if ($mermaid.length === 0) return
-
-    const runMermaidFn = () => runMermaid($mermaid)
-    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
-    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js').then(runMermaidFn)
-  }
+<h3 id="文章启用mathjax"><a href="#文章启用mathjax" class="headerlink" title="文章启用mathjax"></a>文章启用mathjax</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">title:</span> <span class="hljs-string">Hello</span> <span class="hljs-string">World</span><br><span class="hljs-attr">mathjax:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
   
-  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
-  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
-})()</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
-POWERMODE.shake = true;
-POWERMODE.mobile = true;
-document.body.addEventListener('input', POWERMODE);
-</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div></div>
+      <div>https://ximiedeyanhuo.github.io/fzd.github.io/2024/05/11/谁的啊/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>拾光</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年5月11日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/fzd.github.io/2024/05/11/%E4%BF%9D%E5%A7%86%E7%BA%A7%E8%B6%85%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B%EF%BC%9ADolphinScheduler%E5%8D%95%E6%9C%BA(%E6%9C%AC%E5%9C%B0)%E9%83%A8%E7%BD%B2%E5%8F%8A%E8%BD%AF%E4%BB%B6%E8%BF%90%E8%A1%8C%E6%B5%8B%E8%AF%95-%E8%85%BE%E8%AE%AF%E4%BA%91%E5%BC%80%E5%8F%91%E8%80%85%E7%A4%BE%E5%8C%BA-%E8%85%BE%E8%AE%AF%E4%BA%91/" title="DolphinScheduler单机(本地)部署">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">DolphinScheduler单机(本地)部署</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/fzd.github.io/js/events.js" ></script>
+<script  src="/fzd.github.io/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/fzd.github.io/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/fzd.github.io/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/fzd.github.io/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
