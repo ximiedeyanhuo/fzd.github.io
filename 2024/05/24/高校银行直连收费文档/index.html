@@ -16,15 +16,15 @@
   <meta name="author" content="拾光">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1.接口协议说明1.1访问协议统一技术标准，采用基于HTTP协议的服务方式进行交互，提交方式使用POST。 传输方式    支持HTTP传输提交方式    POST数据传输格式    提交和返回数据可以为JSON格式（Content-Type: application&#x2F;json）字符编码    统一采用UTF-8字符编码API服务地址    API服务地址规则：http:&#x2F;&amp;#">
+    <meta name="description" content="1.接口协议说明1.1访问协议统一技术标准，采用基于HTTP协议的服务方式进行交互，提交方式使用POST。       传输方式     支持HTTP传输       提交方式     POST       数据传输格式     提交和返回数据可以为JSON格式（Content-Type: application&#x2F;json）       字符编码     统一采用UTF-8字符编码       A">
 <meta property="og:type" content="article">
 <meta property="og:title" content="银行直连收费">
-<meta property="og:url" content="https://ximiedeyanhuo.github.io/fzd.github.io/2024/05/11/%E9%AB%98%E6%A0%A1%E9%93%B6%E8%A1%8C%E7%9B%B4%E8%BF%9E%E6%94%B6%E8%B4%B9%E6%96%87%E6%A1%A3/index.html">
+<meta property="og:url" content="https://ximiedeyanhuo.github.io/fzd.github.io/2024/05/24/%E9%AB%98%E6%A0%A1%E9%93%B6%E8%A1%8C%E7%9B%B4%E8%BF%9E%E6%94%B6%E8%B4%B9%E6%96%87%E6%A1%A3/index.html">
 <meta property="og:site_name" content="荒岛">
-<meta property="og:description" content="1.接口协议说明1.1访问协议统一技术标准，采用基于HTTP协议的服务方式进行交互，提交方式使用POST。 传输方式    支持HTTP传输提交方式    POST数据传输格式    提交和返回数据可以为JSON格式（Content-Type: application&#x2F;json）字符编码    统一采用UTF-8字符编码API服务地址    API服务地址规则：http:&#x2F;&amp;#">
+<meta property="og:description" content="1.接口协议说明1.1访问协议统一技术标准，采用基于HTTP协议的服务方式进行交互，提交方式使用POST。       传输方式     支持HTTP传输       提交方式     POST       数据传输格式     提交和返回数据可以为JSON格式（Content-Type: application&#x2F;json）       字符编码     统一采用UTF-8字符编码       A">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-05-11T07:12:21.890Z">
-<meta property="article:modified_time" content="2024-05-11T07:12:21.890Z">
+<meta property="article:published_time" content="2024-05-24T06:32:36.925Z">
+<meta property="article:modified_time" content="2024-05-24T06:32:36.925Z">
 <meta property="article:author" content="拾光">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-05-11 15:12" pubdate>
-          2024年5月11日 下午
+        <time datetime="2024-05-24 14:32" pubdate>
+          2024年5月24日 下午
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          457 字
+          450 字
         
       </span>
     
@@ -273,7 +273,30 @@
               <div class="markdown-body">
                 
                 <h1 id="1-接口协议说明"><a href="#1-接口协议说明" class="headerlink" title="1.接口协议说明"></a>1.接口协议说明</h1><h2 id="1-1访问协议"><a href="#1-1访问协议" class="headerlink" title="1.1访问协议"></a>1.1访问协议</h2><p>统一技术标准，采用基于HTTP协议的服务方式进行交互，提交方式使用POST。</p>
-<p>传输方式    支持HTTP传输<br>提交方式    POST<br>数据传输格式    提交和返回数据可以为JSON格式（Content-Type: application&#x2F;json）<br>字符编码    统一采用UTF-8字符编码<br>API服务地址    API服务地址规则：<br>http:&#x2F;&#x2F;<ip>:<port>&#x2F;<service>&#x2F;api&#x2F;wysf&#x2F;common </p>
+<table>
+<tr>
+    <td>传输方式</td>
+    <td>支持HTTP传输</td>
+</tr>
+<tr>
+    <td>提交方式</td>
+    <td>POST</td>
+</tr>
+<tr>
+    <td>数据传输格式</td>
+    <td>提交和返回数据可以为JSON格式（Content-Type: application/json）</td>
+</tr>
+<tr>
+    <td>字符编码</td>
+    <td>统一采用UTF-8字符编码</td>
+</tr>
+<tr>
+    <td>API服务地址</td>
+    <td>API服务地址规则： http://<ip>:<port>/<service>/api/wysf/common </td>
+</tr>
+</table>
+
+
 <h2 id="1-2访问授权"><a href="#1-2访问授权" class="headerlink" title="1.2访问授权"></a>1.2访问授权</h2><p>接口调用方在调用服务之前，必须获取接口服务提供方的访问授权，即appid和签名私钥key（需要平台提供）。</p>
 <h2 id="1-3服务请求方发送请求"><a href="#1-3服务请求方发送请求" class="headerlink" title="1.3服务请求方发送请求"></a>1.3服务请求方发送请求</h2><p>请求头参数内容：<br>其中biz_content为请求业务参数，根据不同的接口构造参数；其余的参数为公用参数。</p>
 <table>
@@ -438,7 +461,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>银行直连收费</div>
-      <div>https://ximiedeyanhuo.github.io/fzd.github.io/2024/05/11/高校银行直连收费文档/</div>
+      <div>https://ximiedeyanhuo.github.io/fzd.github.io/2024/05/24/高校银行直连收费文档/</div>
     </div>
     <div class="license-meta">
       
@@ -450,7 +473,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年5月11日</div>
+          <div>2024年5月24日</div>
         </div>
       
       
@@ -482,7 +505,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/fzd.github.io/2024/05/11/%E8%B0%81%E7%9A%84%E5%95%8A/" title="">
+                      <a href="/fzd.github.io/2024/05/24/%E8%B0%81%E7%9A%84%E5%95%8A/" title="">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile"></span>
                         <span class="visible-mobile">上一篇</span>
@@ -491,12 +514,6 @@
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/fzd.github.io/2024/05/11/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
